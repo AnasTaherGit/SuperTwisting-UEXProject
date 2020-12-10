@@ -1,13 +1,14 @@
-function u  = SMC(S,Wd,Wr)
+function u  = SMC(Wd,Wr)
 %Sliding mode controller for a motor-propeller system
 %Model
 function y=f(x)
         y=-0.08653*x^2-39.902*x;
 end
-e=Wd-Wr;
-mu=0.02;
-beta=0.00015;
-sigma=10;
-u=-f(Wr)-sigma*e-(mu+beta)*sign(S);
+e=Wr-Wd;
+mu=5.6;
+%beta=0.00015;
+%sigma=1;
+Ku=6338.1;
+u=-f(Wr)-Ku*mu*sign(e);
 end
 
