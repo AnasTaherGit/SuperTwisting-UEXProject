@@ -1,0 +1,11 @@
+FPGA_SMC/nfp_sub_double --> nfp_sub_double
+FPGA_SMC/nfp_mul_double --> nfp_mul_double
+FPGA_SMC/Model --> Model
+FPGA_SMC/nfp_add_double --> nfp_add_double
+FPGA_SMC/nfp_abs_double --> nfp_abs_double
+FPGA_SMC/nfp_relop_double --> nfp_relop_double
+FPGA_SMC/nfp_relop_double --> nfp_relop_double_block
+FPGA_SMC/nfp_signum_double --> nfp_signum_double
+FPGA_SMC/nfp_sqrt_double --> nfp_sqrt_double
+FPGA_SMC/nfp_add2_double --> nfp_add2_double
+FPGA_SMC --> FPGA_SMC

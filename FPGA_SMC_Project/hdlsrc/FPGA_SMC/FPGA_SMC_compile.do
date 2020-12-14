@@ -1,0 +1,13 @@
+vlib work
+vmap -c
+vcom  nfp_sub_double.vhd
+vcom  nfp_mul_double.vhd
+vcom  Model.vhd
+vcom  nfp_add_double.vhd
+vcom  nfp_abs_double.vhd
+vcom  nfp_relop_double.vhd
+vcom  nfp_relop_double_block.vhd
+vcom  nfp_signum_double.vhd
+vcom  nfp_sqrt_double.vhd
+vcom  nfp_add2_double.vhd
+vcom  FPGA_SMC.vhd
