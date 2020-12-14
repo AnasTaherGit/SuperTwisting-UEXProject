@@ -1,3 +1,0 @@
-%Sliding mode controller
-
-
