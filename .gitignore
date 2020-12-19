@@ -1,1 +1,6 @@
 .vscode
+pitch_roll_calculation_*
+arduino_bruh_*
+slprj
+*.eep
+*.hex
