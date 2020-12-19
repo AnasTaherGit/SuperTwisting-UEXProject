@@ -1,0 +1,20 @@
+Wire.o: \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/libraries/Wire/src/Wire.cpp \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/libraries/Wire/src/utility/twi.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/libraries/Wire/src/Wire.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Print.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WString.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Printable.h
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/libraries/Wire/src/utility/twi.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/libraries/Wire/src/Wire.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Print.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WString.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Printable.h:

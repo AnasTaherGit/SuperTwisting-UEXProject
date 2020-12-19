@@ -1,0 +1,11 @@
+FPGA_SMC/nfp_sub_single --> nfp_sub_single
+FPGA_SMC/nfp_mul_single --> nfp_mul_single
+FPGA_SMC/Model --> Model
+FPGA_SMC/nfp_add_single --> nfp_add_single
+FPGA_SMC/nfp_abs_single --> nfp_abs_single
+FPGA_SMC/nfp_relop_single --> nfp_relop_single
+FPGA_SMC/nfp_relop_single --> nfp_relop_single_block
+FPGA_SMC/nfp_signum_single --> nfp_signum_single
+FPGA_SMC/nfp_sqrt_single --> nfp_sqrt_single
+FPGA_SMC/nfp_add2_single --> nfp_add2_single
+FPGA_SMC --> FPGA_SMC

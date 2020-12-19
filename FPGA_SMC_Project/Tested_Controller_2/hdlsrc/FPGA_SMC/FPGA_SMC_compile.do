@@ -1,0 +1,13 @@
+vlib work
+vmap -c
+vcom  nfp_sub_single.vhd
+vcom  nfp_mul_single.vhd
+vcom  Model.vhd
+vcom  nfp_add_single.vhd
+vcom  nfp_abs_single.vhd
+vcom  nfp_relop_single.vhd
+vcom  nfp_relop_single_block.vhd
+vcom  nfp_signum_single.vhd
+vcom  nfp_sqrt_single.vhd
+vcom  nfp_add2_single.vhd
+vcom  FPGA_SMC.vhd

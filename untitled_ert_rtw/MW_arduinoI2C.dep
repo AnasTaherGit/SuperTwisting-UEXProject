@@ -1,0 +1,59 @@
+MW_arduinoI2C.o: \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/toolbox/target/supportpackages/arduinobase/src/MW_arduinoI2C.cpp \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include/MW_I2C.h \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include/MW_SVD.h \
+ C:/Users/cawoo/MYFOLD~1/ELECTR~1/PROJET~1/untitled_ert_rtw/rtwtypes.h \
+ C:/Users/cawoo/MYFOLD~1/ELECTR~1/PROJET~1/untitled_ert_rtw/MW_target_hardware_resources.h \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/ARDUIN~1/SCHEDU~1/include/arduinoAVRScheduler.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Arduino.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/binary.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WCharacter.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WString.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/HardwareSerial.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Print.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Printable.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/USBAPI.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Arduino.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/variants/standard/pins_arduino.h \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/3P778C~1.INS/ARDUIN~1.INS/hardware/arduino/avr/LIBRAR~1/Wire/src/Wire.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h \
+ C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/ARDUIN~2/include/io_wrappers.h
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include/MW_I2C.h:
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/shared/svd/include/MW_SVD.h:
+
+C:/Users/cawoo/MYFOLD~1/ELECTR~1/PROJET~1/untitled_ert_rtw/rtwtypes.h:
+
+C:/Users/cawoo/MYFOLD~1/ELECTR~1/PROJET~1/untitled_ert_rtw/MW_target_hardware_resources.h:
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/ARDUIN~1/SCHEDU~1/include/arduinoAVRScheduler.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/binary.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WCharacter.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/WString.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/HardwareSerial.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Print.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Printable.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/USBAPI.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Arduino.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/variants/standard/pins_arduino.h:
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/3P778C~1.INS/ARDUIN~1.INS/hardware/arduino/avr/LIBRAR~1/Wire/src/Wire.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2019b/3P.instrset/arduinoide.instrset/hardware/arduino/avr/cores/arduino/Stream.h:
+
+C:/PROGRA~3/MATLAB/SUPPOR~1/R2019b/toolbox/target/SUPPOR~1/ARDUIN~2/include/io_wrappers.h:

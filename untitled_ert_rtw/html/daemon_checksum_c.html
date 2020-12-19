@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./js/coder_app.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./rtwreport_utils.js"></script>
+<script type="text/javascript" src="./rtwannotate.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/coder_app.css"/>
+</head>
+<body onload="srcFileOnload();">
+<pre id="code">
+<table class="code" id="codeTbl">
+<tr name="1" id="1">
+<td><a id="l1" class='ln'>1</a></td><td><span class="pp">#include&lt;daemon_checksum_prereq.h&gt;</span></td></tr>
+<tr name="2" id="2">
+<td><a id="l2" class='ln'>2</a></td><td><span class="pp">#include&lt;daemon_checksum.h&gt;</span></td></tr>
+<tr name="3" id="3">
+<td><a id="l3" class='ln'>3</a></td><td></td></tr>
+<tr name="4" id="4">
+<td><a id="l4" class='ln'>4</a></td><td><span class="kw">const</span> <a id="4c7" class="tk">uint8_T</a> <a id="4c15" class="tk">CRC_TABLE</a>[] <a id="4c27" class="tk">FLASH_QUALIFIER</a> =</td></tr>
+<tr name="5" id="5">
+<td><a id="l5" class='ln'>5</a></td><td><span class="br">{</span></td></tr>
+<tr name="6" id="6">
+<td><a id="l6" class='ln'>6</a></td><td>0x00, 0x1D, 0x3A, 0x27, 0x74, 0x69, 0x4E, 0x53, 0xE8, 0xF5, 0xD2, 0xCF, 0x9C, 0x81, 0xA6, 0xBB,</td></tr>
+<tr name="7" id="7">
+<td><a id="l7" class='ln'>7</a></td><td>0xCD, 0xD0, 0xF7, 0xEA, 0xB9, 0xA4, 0x83, 0x9E, 0x25, 0x38, 0x1F, 0x02, 0x51, 0x4C, 0x6B, 0x76,</td></tr>
+<tr name="8" id="8">
+<td><a id="l8" class='ln'>8</a></td><td>0x87, 0x9A, 0xBD, 0xA0, 0xF3, 0xEE, 0xC9, 0xD4, 0x6F, 0x72, 0x55, 0x48, 0x1B, 0x06, 0x21, 0x3C,</td></tr>
+<tr name="9" id="9">
+<td><a id="l9" class='ln'>9</a></td><td>0x4A, 0x57, 0x70, 0x6D, 0x3E, 0x23, 0x04, 0x19, 0xA2, 0xBF, 0x98, 0x85, 0xD6, 0xCB, 0xEC, 0xF1,</td></tr>
+<tr name="10" id="10">
+<td><a id="l10" class='ln'>10</a></td><td>0x13, 0x0E, 0x29, 0x34, 0x67, 0x7A, 0x5D, 0x40, 0xFB, 0xE6, 0xC1, 0xDC, 0x8F, 0x92, 0xB5, 0xA8,</td></tr>
+<tr name="11" id="11">
+<td><a id="l11" class='ln'>11</a></td><td>0xDE, 0xC3, 0xE4, 0xF9, 0xAA, 0xB7, 0x90, 0x8D, 0x36, 0x2B, 0x0C, 0x11, 0x42, 0x5F, 0x78, 0x65,</td></tr>
+<tr name="12" id="12">
+<td><a id="l12" class='ln'>12</a></td><td>0x94, 0x89, 0xAE, 0xB3, 0xE0, 0xFD, 0xDA, 0xC7, 0x7C, 0x61, 0x46, 0x5B, 0x08, 0x15, 0x32, 0x2F,</td></tr>
+<tr name="13" id="13">
+<td><a id="l13" class='ln'>13</a></td><td>0x59, 0x44, 0x63, 0x7E, 0x2D, 0x30, 0x17, 0x0A, 0xB1, 0xAC, 0x8B, 0x96, 0xC5, 0xD8, 0xFF, 0xE2,</td></tr>
+<tr name="14" id="14">
+<td><a id="l14" class='ln'>14</a></td><td>0x26, 0x3B, 0x1C, 0x01, 0x52, 0x4F, 0x68, 0x75, 0xCE, 0xD3, 0xF4, 0xE9, 0xBA, 0xA7, 0x80, 0x9D,</td></tr>
+<tr name="15" id="15">
+<td><a id="l15" class='ln'>15</a></td><td>0xEB, 0xF6, 0xD1, 0xCC, 0x9F, 0x82, 0xA5, 0xB8, 0x03, 0x1E, 0x39, 0x24, 0x77, 0x6A, 0x4D, 0x50,</td></tr>
+<tr name="16" id="16">
+<td><a id="l16" class='ln'>16</a></td><td>0xA1, 0xBC, 0x9B, 0x86, 0xD5, 0xC8, 0xEF, 0xF2, 0x49, 0x54, 0x73, 0x6E, 0x3D, 0x20, 0x07, 0x1A,</td></tr>
+<tr name="17" id="17">
+<td><a id="l17" class='ln'>17</a></td><td>0x6C, 0x71, 0x56, 0x4B, 0x18, 0x05, 0x22, 0x3F, 0x84, 0x99, 0xBE, 0xA3, 0xF0, 0xED, 0xCA, 0xD7,</td></tr>
+<tr name="18" id="18">
+<td><a id="l18" class='ln'>18</a></td><td>0x35, 0x28, 0x0F, 0x12, 0x41, 0x5C, 0x7B, 0x66, 0xDD, 0xC0, 0xE7, 0xFA, 0xA9, 0xB4, 0x93, 0x8E,</td></tr>
+<tr name="19" id="19">
+<td><a id="l19" class='ln'>19</a></td><td>0xF8, 0xE5, 0xC2, 0xDF, 0x8C, 0x91, 0xB6, 0xAB, 0x10, 0x0D, 0x2A, 0x37, 0x64, 0x79, 0x5E, 0x43,</td></tr>
+<tr name="20" id="20">
+<td><a id="l20" class='ln'>20</a></td><td>0xB2, 0xAF, 0x88, 0x95, 0xC6, 0xDB, 0xFC, 0xE1, 0x5A, 0x47, 0x60, 0x7D, 0x2E, 0x33, 0x14, 0x09,</td></tr>
+<tr name="21" id="21">
+<td><a id="l21" class='ln'>21</a></td><td>0x7F, 0x62, 0x45, 0x58, 0x0B, 0x16, 0x31, 0x2C, 0x97, 0x8A, 0xAD, 0xB0, 0xE3, 0xFE, 0xD9, 0xC4</td></tr>
+<tr name="22" id="22">
+<td><a id="l22" class='ln'>22</a></td><td><span class="br">}</span>;</td></tr>
+<tr name="23" id="23">
+<td><a id="l23" class='ln'>23</a></td><td></td></tr>
+<tr name="24" id="24">
+<td><a id="l24" class='ln'>24</a></td><td><span class="ct">/* Function: verify_crc8_j1850</span></td></tr>
+<tr name="25" id="25">
+<td><a id="l25" class='ln'>25</a></td><td><span class="ct"> * Abstract:</span></td></tr>
+<tr name="26" id="26">
+<td><a id="l26" class='ln'>26</a></td><td><span class="ct"> *  Validate data using the crc8 checksum.</span></td></tr>
+<tr name="27" id="27">
+<td><a id="l27" class='ln'>27</a></td><td><span class="ct"> *  Checksum is located at the last byte +1 in the sequence.</span></td></tr>
+<tr name="28" id="28">
+<td><a id="l28" class='ln'>28</a></td><td><span class="ct"> *  	verify_crc8_j1850(buffer, 8, 8), means the checksum for</span></td></tr>
+<tr name="29" id="29">
+<td><a id="l29" class='ln'>29</a></td><td><span class="ct"> *  		buffer[8]-buffer[15] is at buffer[16]</span></td></tr>
+<tr name="30" id="30">
+<td><a id="l30" class='ln'>30</a></td><td><span class="ct"> * CRC Word is 8bit.</span></td></tr>
+<tr name="31" id="31">
+<td><a id="l31" class='ln'>31</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="32" id="32">
+<td><a id="l32" class='ln'>32</a></td><td><a id="32c1" class="tk">boolean_T</a> <a id="32c11" class="tk">verify_crc8_j1850</a>(<span class="kw">const</span> <a id="32c35" class="tk">uint8_T</a> <a id="32c43" class="tk">*</a><a id="32c44" class="tk">p</a>, <a id="32c47" class="tk">uint16_T</a> <a id="32c56" class="tk">offset</a>, <a id="32c64" class="tk">uint16_T</a> <a id="32c73" class="tk">length</a>)</td></tr>
+<tr name="33" id="33">
+<td><a id="l33" class='ln'>33</a></td><td><span class="br">{</span>   </td></tr>
+<tr name="34" id="34">
+<td><a id="l34" class='ln'>34</a></td><td>	<span class="kw">if</span> ( <a id="34c7" class="tk">p</a>[<a id="34c9" class="tk">offset</a><a id="34c15" class="tk">+</a><a id="34c16" class="tk">length</a>] <a id="34c24" class="tk">==</a> <a id="34c27" class="tk">calculate_crc8_j1850</a>(<a id="34c48" class="tk">p</a>, <a id="34c51" class="tk">offset</a>, <a id="34c59" class="tk">length</a>) )</td></tr>
+<tr name="35" id="35">
+<td><a id="l35" class='ln'>35</a></td><td>		<span class="kw">return</span> <a id="35c10" class="tk">TRUE</a>;</td></tr>
+<tr name="36" id="36">
+<td><a id="l36" class='ln'>36</a></td><td>	<span class="kw">else</span></td></tr>
+<tr name="37" id="37">
+<td><a id="l37" class='ln'>37</a></td><td>		<span class="kw">return</span> <a id="37c10" class="tk">FALSE</a>;</td></tr>
+<tr name="38" id="38">
+<td><a id="l38" class='ln'>38</a></td><td><span class="br">}</span></td></tr>
+<tr name="39" id="39">
+<td><a id="l39" class='ln'>39</a></td><td></td></tr>
+<tr name="40" id="40">
+<td><a id="l40" class='ln'>40</a></td><td><span class="ct">/* Function: calculate_crc8_j1850</span></td></tr>
+<tr name="41" id="41">
+<td><a id="l41" class='ln'>41</a></td><td><span class="ct"> * Abstract: calculate the crc for a contigous block of data</span></td></tr>
+<tr name="42" id="42">
+<td><a id="l42" class='ln'>42</a></td><td><span class="ct"> *  </span></td></tr>
+<tr name="43" id="43">
+<td><a id="l43" class='ln'>43</a></td><td><span class="ct"> * CRC Word is 8bit.</span></td></tr>
+<tr name="44" id="44">
+<td><a id="l44" class='ln'>44</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="45" id="45">
+<td><a id="l45" class='ln'>45</a></td><td><a id="45c1" class="tk">uint8_T</a> <a id="45c9" class="tk">calculate_crc8_j1850</a>(<span class="kw">const</span> <a id="45c36" class="tk">uint8_T</a> <a id="45c44" class="tk">*</a><a id="45c45" class="tk">p</a>, <a id="45c48" class="tk">uint16_T</a> <a id="45c57" class="tk">offset</a>, <a id="45c65" class="tk">uint16_T</a> <a id="45c74" class="tk">length</a>)</td></tr>
+<tr name="46" id="46">
+<td><a id="l46" class='ln'>46</a></td><td><span class="br">{</span></td></tr>
+<tr name="47" id="47">
+<td><a id="l47" class='ln'>47</a></td><td>	<span class="kw">return</span> <a id="47c9" class="tk">calculate_crc8_j1850_withInit</a>(<a id="47c39" class="tk">p</a>, (<a id="47c43" class="tk">uint8_T</a>)0xFF, <a id="47c57" class="tk">offset</a>, <a id="47c65" class="tk">length</a>) ;</td></tr>
+<tr name="48" id="48">
+<td><a id="l48" class='ln'>48</a></td><td><span class="br">}</span></td></tr>
+<tr name="49" id="49">
+<td><a id="l49" class='ln'>49</a></td><td></td></tr>
+<tr name="50" id="50">
+<td><a id="l50" class='ln'>50</a></td><td><span class="ct">/* Function: calculate_crc8_j1850_withInit</span></td></tr>
+<tr name="51" id="51">
+<td><a id="l51" class='ln'>51</a></td><td><span class="ct"> * Abstract: Use this when you want to combine crcs of multiple discrete</span></td></tr>
+<tr name="52" id="52">
+<td><a id="l52" class='ln'>52</a></td><td><span class="ct"> * buffers.</span></td></tr>
+<tr name="53" id="53">
+<td><a id="l53" class='ln'>53</a></td><td><span class="ct"> *  </span></td></tr>
+<tr name="54" id="54">
+<td><a id="l54" class='ln'>54</a></td><td><span class="ct"> * CRC Word is 8bit.</span></td></tr>
+<tr name="55" id="55">
+<td><a id="l55" class='ln'>55</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="56" id="56">
+<td><a id="l56" class='ln'>56</a></td><td><a id="56c1" class="tk">uint8_T</a> <a id="56c9" class="tk">calculate_crc8_j1850_withInit</a>(<span class="kw">const</span> <a id="56c45" class="tk">uint8_T</a> <a id="56c53" class="tk">*</a><a id="56c54" class="tk">p</a>, <a id="56c57" class="tk">uint8_T</a> <a id="56c65" class="tk">initVal</a>, <a id="56c74" class="tk">uint16_T</a> <a id="56c83" class="tk">offset</a>, <a id="56c91" class="tk">uint16_T</a> <a id="56c100" class="tk">length</a>)</td></tr>
+<tr name="57" id="57">
+<td><a id="l57" class='ln'>57</a></td><td><span class="br">{</span></td></tr>
+<tr name="58" id="58">
+<td><a id="l58" class='ln'>58</a></td><td>	<a id="58c2" class="tk">uint8_T</a> <a id="58c10" class="tk">crc</a> = <a id="58c16" class="tk">initVal</a>;</td></tr>
+<tr name="59" id="59">
+<td><a id="l59" class='ln'>59</a></td><td>	<span class="kw">unsigned</span> <span class="kw">int</span> <a id="59c15" class="tk">i</a>;</td></tr>
+<tr name="60" id="60">
+<td><a id="l60" class='ln'>60</a></td><td></td></tr>
+<tr name="61" id="61">
+<td><a id="l61" class='ln'>61</a></td><td>    <span class="kw">for</span> (<a id="61c10" class="tk">i</a>=<a id="61c12" class="tk">offset</a>; <a id="61c20" class="tk">i</a> <a id="61c22" class="tk">&lt;</a> (<a id="61c25" class="tk">offset</a> <a id="61c32" class="tk">+</a> <a id="61c34" class="tk">length</a>); <a id="61c43" class="tk">i</a><a id="61c44" class="tk">++</a>)</td></tr>
+<tr name="62" id="62">
+<td><a id="l62" class='ln'>62</a></td><td>		<a id="62c3" class="tk">crc</a> = <a id="62c9" class="tk">CRC8_TABLE_J1850</a>(<a id="62c26" class="tk">crc</a> <a id="62c30" class="tk">^</a> <a id="62c32" class="tk">p</a>[<a id="62c34" class="tk">i</a>]);</td></tr>
+<tr name="63" id="63">
+<td><a id="l63" class='ln'>63</a></td><td>    </td></tr>
+<tr name="64" id="64">
+<td><a id="l64" class='ln'>64</a></td><td>	<span class="kw">return</span> <a id="64c9" class="tk">crc</a> ;</td></tr>
+<tr name="65" id="65">
+<td><a id="l65" class='ln'>65</a></td><td><span class="br">}</span></td></tr>
+<tr name="66" id="66">
+<td><a id="l66" class='ln'>66</a></td><td></td></tr>
+<tr name="67" id="67">
+<td><a id="l67" class='ln'>67</a></td><td><span class="ct">/* Function: calculate_crc8_j1850_bytePacked</span></td></tr>
+<tr name="68" id="68">
+<td><a id="l68" class='ln'>68</a></td><td><span class="ct"> * Abstract: calculate the crc for a contigous block of data</span></td></tr>
+<tr name="69" id="69">
+<td><a id="l69" class='ln'>69</a></td><td><span class="ct"> * </span></td></tr>
+<tr name="70" id="70">
+<td><a id="l70" class='ln'>70</a></td><td><span class="ct"> * CRC Word is 8bit.</span></td></tr>
+<tr name="71" id="71">
+<td><a id="l71" class='ln'>71</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="72" id="72">
+<td><a id="l72" class='ln'>72</a></td><td><a id="72c1" class="tk">uint8_T</a> <a id="72c9" class="tk">calculate_crc8_j1850_bytePacked</a>(<span class="kw">const</span> <a id="72c47" class="tk">uint8_T</a> <a id="72c55" class="tk">*</a><a id="72c56" class="tk">p</a>, <a id="72c59" class="tk">uint16_T</a> <a id="72c68" class="tk">offset</a>, <a id="72c76" class="tk">uint16_T</a> <a id="72c85" class="tk">length</a>)</td></tr>
+<tr name="73" id="73">
+<td><a id="l73" class='ln'>73</a></td><td><span class="br">{</span></td></tr>
+<tr name="74" id="74">
+<td><a id="l74" class='ln'>74</a></td><td>	<span class="kw">return</span> <a id="74c9" class="tk">calculate_crc8_j1850_withInit_bytePacked</a>(<a id="74c50" class="tk">p</a>, (<a id="74c54" class="tk">uint8_T</a>)0xFF, <a id="74c68" class="tk">offset</a>, <a id="74c76" class="tk">length</a>) ;</td></tr>
+<tr name="75" id="75">
+<td><a id="l75" class='ln'>75</a></td><td><span class="br">}</span></td></tr>
+<tr name="76" id="76">
+<td><a id="l76" class='ln'>76</a></td><td></td></tr>
+<tr name="77" id="77">
+<td><a id="l77" class='ln'>77</a></td><td><span class="ct">/* Function: calculate_crc8_j1850_withInit_bytePacked</span></td></tr>
+<tr name="78" id="78">
+<td><a id="l78" class='ln'>78</a></td><td><span class="ct"> * Abstract: Same as calculate_crc8_j1850, but, is intended for targets with 16bit words</span></td></tr>
+<tr name="79" id="79">
+<td><a id="l79" class='ln'>79</a></td><td><span class="ct"> *           AND packed data.</span></td></tr>
+<tr name="80" id="80">
+<td><a id="l80" class='ln'>80</a></td><td><span class="ct"> * Parameters:</span></td></tr>
+<tr name="81" id="81">
+<td><a id="l81" class='ln'>81</a></td><td><span class="ct"> *  offset - offset from base in 8bit increments.</span></td></tr>
+<tr name="82" id="82">
+<td><a id="l82" class='ln'>82</a></td><td><span class="ct"> *  length - each unit length is 8bit</span></td></tr>
+<tr name="83" id="83">
+<td><a id="l83" class='ln'>83</a></td><td><span class="ct"> *  </span></td></tr>
+<tr name="84" id="84">
+<td><a id="l84" class='ln'>84</a></td><td><span class="ct"> * CRC Word is 8bit.</span></td></tr>
+<tr name="85" id="85">
+<td><a id="l85" class='ln'>85</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="86" id="86">
+<td><a id="l86" class='ln'>86</a></td><td><a id="86c1" class="tk">uint8_T</a> <a id="86c9" class="tk">calculate_crc8_j1850_withInit_bytePacked</a>(<span class="kw">const</span> <a id="86c56" class="tk">uint8_T</a> <a id="86c64" class="tk">*</a><a id="86c65" class="tk">p</a>, <a id="86c68" class="tk">uint8_T</a> <a id="86c76" class="tk">initVal</a>, <a id="86c85" class="tk">uint16_T</a> <a id="86c94" class="tk">offset</a>, <a id="86c102" class="tk">uint16_T</a> <a id="86c111" class="tk">length</a>)</td></tr>
+<tr name="87" id="87">
+<td><a id="l87" class='ln'>87</a></td><td><span class="br">{</span></td></tr>
+<tr name="88" id="88">
+<td><a id="l88" class='ln'>88</a></td><td>	<a id="88c2" class="tk">uint8_T</a> <a id="88c10" class="tk">crc</a> = <a id="88c16" class="tk">initVal</a>;</td></tr>
+<tr name="89" id="89">
+<td><a id="l89" class='ln'>89</a></td><td>	<span class="kw">unsigned</span> <span class="kw">int</span> <a id="89c15" class="tk">i</a>;</td></tr>
+<tr name="90" id="90">
+<td><a id="l90" class='ln'>90</a></td><td>	</td></tr>
+<tr name="91" id="91">
+<td><a id="l91" class='ln'>91</a></td><td>	<span class="kw">for</span> (<a id="91c7" class="tk">i</a> = <a id="91c11" class="tk">offset</a>; <a id="91c19" class="tk">i</a> <a id="91c21" class="tk">&lt;</a> <a id="91c23" class="tk">offset</a><a id="91c29" class="tk">+</a><a id="91c30" class="tk">length</a>; <a id="91c38" class="tk">i</a><a id="91c39" class="tk">++</a>)</td></tr>
+<tr name="92" id="92">
+<td><a id="l92" class='ln'>92</a></td><td>		<a id="92c3" class="tk">crc</a> = <a id="92c9" class="tk">CRC8_TABLE_J1850</a>( (<a id="92c28" class="tk">crc</a> <a id="92c32" class="tk">^</a> (<a id="92c35" class="tk">p</a>[<a id="92c37" class="tk">i</a><a id="92c38" class="tk">&gt;&gt;</a>1] <a id="92c43" class="tk">&gt;&gt;</a> 8<a id="92c47" class="tk">*</a>(<a id="92c49" class="tk">i</a><a id="92c50" class="tk">&amp;</a>0x1))) <a id="92c58" class="tk">&amp;</a> 0x0FF );   <span class="ct">//equivalent to p[index/2] &gt;&gt; 8*(index%2)</span></td></tr>
+<tr name="93" id="93">
+<td><a id="l93" class='ln'>93</a></td><td>    </td></tr>
+<tr name="94" id="94">
+<td><a id="l94" class='ln'>94</a></td><td>	<span class="kw">return</span> <a id="94c9" class="tk">crc</a> ;</td></tr>
+<tr name="95" id="95">
+<td><a id="l95" class='ln'>95</a></td><td><span class="br">}</span></td></tr>
+<tr name="96" id="96">
+<td><a id="l96" class='ln'>96</a></td><td></td></tr>
+</table>
+</pre>
+</body>
+</html>
