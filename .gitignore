@@ -5,3 +5,7 @@ slprj
 *.eep
 *.hex
 *.mexw64
+*.elf
+*.autosave
+*.slxc
+Pitch_compute_*
