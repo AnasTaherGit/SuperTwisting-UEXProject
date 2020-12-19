@@ -4,3 +4,4 @@ arduino_bruh_*
 slprj
 *.eep
 *.hex
+*.mexw64
