@@ -1,6 +1,4 @@
 .vscode
-pitch_roll_calculation_*
-arduino_bruh_*
 slprj
 *.eep
 *.hex
@@ -9,3 +7,6 @@ slprj
 *.autosave
 *.slxc
 Pitch_compute_*
+*_ert_rtw
+test.m
+
