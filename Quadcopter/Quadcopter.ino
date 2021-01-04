@@ -18,7 +18,9 @@ float Angle;
 float Speed;
 
 // Control System Setup
-float Throttle;
+int Throttle;
+int input_1;
+int input_2;
 // PID Angle control
 float K_angle=5;
 float Ki_angle=2;
@@ -92,6 +94,40 @@ void speed_sensor(){
 }
 //------------------------------------------------------------------------------------------------------
 
+
+//---------------------------- PWM IMPLEMENTATION -------------------------------------------
+int timer_channel_1,timer_channel_2,loop_timer,esc_loop_timer;
+
+void PWM(){
+  if (input_1 < 1200)
+    input_1 = 1200; //Keep the motors running.
+  if (input_2 < 1200)
+    input_2 = 1200; //Keep the motors running.
+
+  if (input_1 > 2000)
+    input_1 = 2000; //Limit the esc-1 pulse to 2000us.
+  if (input_2 > 2000)
+    input_2 = 2000; //Limit the esc-2 pulse to 2000us.
+
+  while (micros() - loop_timer < 4000)
+    ;                    //We wait until 4000us are passed.
+  loop_timer = micros(); //Set the timer for the next loop.
+
+  PORTD |= B11110000;                   //Set digital outputs 4,5,6 and 7 high.
+  timer_channel_1 = input_1 + loop_timer; //Calculate the time of the faling edge of the esc-1 pulse.
+  timer_channel_2 = input_2 + loop_timer; //Calculate the time of the faling edge of the esc-2 pulse.
+
+  while (PORTD >= 63)
+  {                            //Stay in this loop until output 4,5,6 and 7 are low.
+    esc_loop_timer = micros(); //Read the current time.
+    if (timer_channel_1 <= esc_loop_timer)
+      PORTD &= B10111111; //Set digital output 4 to low if the time is expired.
+    if (timer_channel_2 <= esc_loop_timer)
+      PORTD &= B01111111;
+  }
+}
+
+//------------------------------------------------------------------------------------------------
 void setup() {
   Serial.begin(9600);
   Wire.begin();
@@ -145,4 +181,9 @@ void loop() {
   speed_sensor();
   pid_speed(); 
   Serial.print("Angle :");Serial.print(Angle);Serial.print(" Speed :");Serial.println(Speed);
+
+  input_1=Throttle+(int)speed_pid_output;
+  input_2=Throttle-(int)speed_pid_output;
+  PWM();
+  
 }
