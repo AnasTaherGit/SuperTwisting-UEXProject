@@ -44,9 +44,9 @@ void loop() {
   accelerometer_z = Wire.read()<<8 | Wire.read(); // reading registers: 0x3F (ACCEL_ZOUT_H) and 0x40 (ACCEL_ZOUT_L)
 
   //Converting
-  accelerometer_x =(float)accelerometer_x/16384-Mean_x_error*LPF+previous_x*(1-LPF);
-  accelerometer_y =(float)accelerometer_y/16384-Mean_y_error;
-  accelerometer_z =(float)accelerometer_z/16384-Mean_z_error*LPF+previous_z*(1-LPF);
+  accelerometer_x =(float)(accelerometer_x/16384-Mean_x_error)*LPF+previous_x*(1-LPF);
+  accelerometer_y =(float)(accelerometer_y/16384-Mean_y_error);
+  accelerometer_z =(float)(accelerometer_z/16384-Mean_z_error)*LPF+previous_z*(1-LPF);
 
   previous_x=accelerometer_x;
   previous_z=accelerometer_z;
