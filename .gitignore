@@ -1,8 +1,18 @@
+# IDE settings
+.vscode
 
-Rapport/~$per Twisting Implementation for Quadcopter control.docx
-Rapport/~WRL1836.tmp
+# Matlab additional files
+slprj
 *.eep
 *.hex
-arduino_bruh_*
-pitch_roll_calculation*
-slprj
+*.mexw64
+*.elf
+*.autosave
+*.slxc
+*_ert_rtw
+*_grt_rtw
+
+# Experiments
+test.m
+Quadcopter simulation project
+
