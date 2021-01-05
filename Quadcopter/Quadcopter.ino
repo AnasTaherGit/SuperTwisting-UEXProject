@@ -1,4 +1,5 @@
 #include "Wire.h" // This library allows you to communicate with I2C devices.
+#include "Arduino.h"
 //MPU6050 parameters
 const int MPU_ADDR = 0x68; // I2C address of the MPU-6050. If AD0 pin is set to HIGH, the I2C address will be 0x69.
 int Data_len=100;
@@ -145,7 +146,7 @@ void setup() {
     Wire.beginTransmission(MPU_ADDR);
     Wire.write(0x3B); // starting with register 0x3B (ACCEL_XOUT_H) [MPU-6000 and MPU-6050 Register Map and Descriptions Revision 4.2, p.40]
     Wire.endTransmission(false); // the parameter indicates that the Arduino will send a restart. As a result, the connection is kept active.
-    Wire.requestFrom(MPU_ADDR, 3*2, true); // request a total of 7*2=14 registers
+    Wire.requestFrom(MPU_ADDR, 3*2, true); // request a total of 3*2=6 registers
     Mean_x += Wire.read()<<8 | Wire.read(); // reading registers: 0x3B (ACCEL_XOUT_H) and 0x3C (ACCEL_XOUT_L)
     Mean_y += Wire.read()<<8 | Wire.read(); // reading registers: 0x3D (ACCEL_YOUT_H) and 0x3E (ACCEL_YOUT_L)
     Mean_z += Wire.read()<<8 | Wire.read(); // reading registers: 0x3F (ACCEL_ZOUT_H) and 0x40 (ACCEL_ZOUT_L)
@@ -157,10 +158,10 @@ void setup() {
   //Gyroscope Calibration
   for (int i=0;i<Data_len;i++){
     Wire.beginTransmission(MPU_ADDR);
-    Wire.write(0x45); // starting with register 0x3B (ACCEL_XOUT_H) [MPU-6000 and MPU-6050 Register Map and Descriptions Revision 4.2, p.40]
+    Wire.write(0x45); // starting with register 0x45 (GYRO_YOUT_H) 
     Wire.endTransmission(false); // the parameter indicates that the Arduino will send a restart. As a result, the connection is kept active.
-    Wire.requestFrom(MPU_ADDR, 1*2, true); // request a total of 7*2=14 registers
-    Mean_gyro += Wire.read()<<8 | Wire.read(); // reading registers: 0x3B (ACCEL_XOUT_H) and 0x3C (ACCEL_XOUT_L)
+    Wire.requestFrom(MPU_ADDR, 1*2, true); // request a total of 1*2=2 registers
+    Mean_gyro += Wire.read()<<8 | Wire.read(); // reading registers: 0x45 (GYRO_YOUT_H) and 0x46 (GURO_YOUT_L)
   }
   Mean_gyro_error=((float)Mean_gyro/Data_len)/131.0;
   
