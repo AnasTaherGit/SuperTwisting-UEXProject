@@ -1,70 +1,48 @@
-/*
- *
- * Mapping of the different gyro and accelero configurations:
- *
- * GYRO_CONFIG_[0,1,2,3] range = +- [250, 500,1000,2000] °/s
- *                       sensi =    [131,65.5,32.8,16.4] bit/(°/s)
- *
- * ACC_CONFIG_[0,1,2,3] range = +- [    2,   4,   8,  16] times the gravity (9.81m/s²)
- *                      sensi =    [16384,8192,4096,2048] bit/gravity
-*/
-
-#ifndef MPU_LIB_H
-#define MPU_LIB_H
+#ifndef mpu_lib_h
+#define mpu_lib_h
 
 #include "Arduino.h"
 #include "Wire.h"
 
 #define MPU6050_ADDR 0x68
-#define MPU6050_SMPLRT_DIV_REGISTER 0x19
-#define MPU6050_CONFIG_REGISTER 0x1a
+#define MPU6050_SMPLRT_DIV 0x19
+#define MPU6050_CONFIG 0x1a
+#define MPU6050_GYRO_CONFIG 0x1b
+#define MPU6050_ACCEL_CONFIG 0x1c
+#define MPU6050_WHO_AM_I 0x75
+#define MPU6050_PWR_MGMT_1 0x6b
 #define MPU6050_GYRO_CONFIG_REGISTER 0x1b
 #define MPU6050_ACCEL_CONFIG_REGISTER 0x1c
-#define MPU6050_PWR_MGMT_1_REGISTER 0x6b
-
-#define MPU6050_GYRO_OUT_REGISTER 0x43
-#define MPU6050_ACCEL_OUT_REGISTER 0x3B
-
-#define RAD_2_DEG 57.29578 // [°/rad]
-#define CALIB_OFFSET_NB_MES 1000
-
-#define DEFAULT_GYRO_COEFF 0.9
 
 class MPU6050
 {
 public:
-    // INIT and BASIC FUNCTIONS
     MPU6050(TwoWire &w);
-    byte begin(int gyro_config_num = 0, int acc_config_num = 0);
+    MPU6050(TwoWire &w, float aC, float gC);
 
-    byte writeData(byte reg, byte data);
-    byte readData(byte reg);
-
-    void calcOffsets(bool is_calc_gyro = true, bool is_calc_acc = true);
-
-    // MPU CONFIG SETTER
-    byte setGyroConfig(int config_num);
-    byte setAccConfig(int config_num);
+    void begin();
 
     void setGyroOffsets(float x, float y, float z);
-    void setAccOffsets(float x, float y, float z);
 
-    void setFilterGyroCoef(float gyro_coeff);
-    void setFilterAccCoef(float acc_coeff);
+    void writeMPU6050(byte reg, byte data);
+    byte readMPU6050(byte reg);
 
-    // MPU CONFIG GETTER
-    float getGyroXoffset() { return gyroXoffset; };
-    float getGyroYoffset() { return gyroYoffset; };
-    float getGyroZoffset() { return gyroZoffset; };
+    int16_t getRawAccX() { return rawAccX; };
+    int16_t getRawAccY() { return rawAccY; };
+    int16_t getRawAccZ() { return rawAccZ; };
 
-    float getAccXoffset() { return accXoffset; };
-    float getAccYoffset() { return accYoffset; };
-    float getAccZoffset() { return accZoffset; };
+    int16_t getRawGyroX() { return rawGyroX; };
+    int16_t getRawGyroY() { return rawGyroY; };
+    int16_t getRawGyroZ() { return rawGyroZ; };
 
-    float getFilterGyroCoef() { return filterGyroCoef; };
-    float getFilterAccCoef() { return 1.0 - filterGyroCoef; };
+    int16_t getAccErrorX() { return accelXerror; };
+    int16_t getAccErrorY() { return accelYerror; };
+    int16_t getAccErrorZ() { return accelZerror; };
 
-    // INLOOP GETTER
+    int16_t getGyrErrorX() { return gyrXerror; };
+    int16_t getGyrErrorY() { return gyrYerror; };
+    int16_t getGyrErrorZ() { return gyrZerror; };
+
     float getAccX() { return accX; };
     float getAccY() { return accY; };
     float getAccZ() { return accZ; };
@@ -73,27 +51,52 @@ public:
     float getGyroY() { return gyroY; };
     float getGyroZ() { return gyroZ; };
 
-    float getAccAngleX() { return angleAccX; };
+    void calcGyroOffsets(bool console = false, uint16_t delayBefore = 1000, uint16_t delayAfter = 3000);
+    void calcAccelError(bool console = false, uint16_t delayBefore = 1000, uint16_t delayAfter = 3000);
+
+    float getGyroXoffset() { return gyroXoffset; };
+    float getGyroYoffset() { return gyroYoffset; };
+    float getGyroZoffset() { return gyroZoffset; };
+
+    void update();
+    void process();
+    void process_filtered(float rAccX, float rAccY, float rAccZ, float rGyroX, float rGyroY, float rGyroZ);
+
+    float getAccAngleX()
+    {
+        return angleAccX;
+    };
     float getAccAngleY() { return angleAccY; };
+
+    float getGyroAngleX() { return angleGyroX; };
+    float getGyroAngleY() { return angleGyroY; };
+    float getGyroAngleZ() { return angleGyroZ; };
 
     float getAngleX() { return angleX; };
     float getAngleY() { return angleY; };
     float getAngleZ() { return angleZ; };
 
-    // INLOOP UPDATE
-    void fetchData();
-    void update();
-
 private:
     TwoWire *wire;
-    float acc_lsb_to_g;
+
+    int16_t rawAccX, rawAccY, rawAccZ,
+        rawGyroX, rawGyroY, rawGyroZ,
+        accelXerror, accelYerror, accelZerror,
+        gyrXerror, gyrYerror, gyrZerror;
+
     float gyroXoffset, gyroYoffset, gyroZoffset;
-    float accXoffset, accYoffset, accZoffset;
+
     float accX, accY, accZ, gyroX, gyroY, gyroZ;
-    float angleAccX, angleAccY;
+
+    float angleGyroX, angleGyroY, angleGyroZ,
+        angleAccX, angleAccY, angleAccZ;
+
     float angleX, angleY, angleZ;
+
+    float interval;
     long preInterval;
-    float filterGyroCoef; // complementary filter coefficient to balance gyro vs accelero data to get angle
+
+    float accCoef, gyroCoef;
 };
 
 #endif
