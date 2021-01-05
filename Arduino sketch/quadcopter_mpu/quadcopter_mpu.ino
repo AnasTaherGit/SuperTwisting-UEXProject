@@ -7,9 +7,9 @@ MPU6050 mpu(Wire);
 SimpleKalmanFilter accfil_x(0, 0, 0.1);
 SimpleKalmanFilter accfil_y(0, 0, 0.1);
 SimpleKalmanFilter accfil_z(0, 0, 0.1);
-SimpleKalmanFilter gyrfil_x(1, 1, 0.01);
-SimpleKalmanFilter gyrfil_y(1, 1, 0.01);
-SimpleKalmanFilter gyrfil_z(1, 1, 0.01);
+SimpleKalmanFilter gyrfil_x(0, 0, 0.1);
+SimpleKalmanFilter gyrfil_y(0, 0, 0.1);
+SimpleKalmanFilter gyrfil_z(0, 0, 0.1);
 
 float rawAccX;
 float rawAccY;
@@ -29,27 +29,36 @@ void setup()
 void loop()
 {
     get_imu_readings();
-    Serial.print(mpu.getAngleX());
+    Serial.print(mpu.getRawGyroX());
     Serial.print(" ");
-    Serial.print(mpu.getAngleY());
-    Serial.print(" ");
-    Serial.println(mpu.getAngleZ());
+    Serial.println(rawGyroX);
 }
 
 void initialize_filters()
 {
     accfil_x.setMeasurementError(mpu.getAccErrorX());
     accfil_x.setEstimateError(mpu.getAccErrorX());
+
     accfil_y.setMeasurementError(mpu.getAccErrorY());
     accfil_y.setEstimateError(mpu.getAccErrorY());
+
     accfil_z.setMeasurementError(mpu.getAccErrorZ());
     accfil_z.setEstimateError(mpu.getAccErrorZ());
+
+    gyrfil_x.setMeasurementError(mpu.getGyrErrorX());
+    gyrfil_x.setEstimateError(mpu.getGyrErrorX());
+
+    gyrfil_y.setMeasurementError(mpu.getGyrErrorY());
+    gyrfil_y.setEstimateError(mpu.getGyrErrorY());
+
+    gyrfil_z.setMeasurementError(mpu.getGyrErrorZ());
+    gyrfil_z.setEstimateError(mpu.getGyrErrorZ());
 }
 void initialize_mpu()
 {
     mpu.begin();
-    mpu.calcGyroOffsets(true);
-    mpu.calcAccelError(true);
+    mpu.calcAccelError(false);
+    mpu.calcGyroOffsets(false);
 }
 void get_imu_readings()
 {

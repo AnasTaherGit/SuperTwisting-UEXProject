@@ -54,7 +54,7 @@ void MPU6050::setGyroOffsets(float x, float y, float z)
 void MPU6050::calcGyroOffsets(bool console, uint16_t delayBefore, uint16_t delayAfter)
 {
     float x = 0, y = 0, z = 0;
-    int16_t rx, ry, rz, rx_max = -100, ry_max = -100, rz_max = -100, rx_min = 100, ry_min = 100, rz_min = 100;
+    int16_t rx, ry, rz, rx_max = -30000, ry_max = -30000, rz_max = -30000, rx_min = 30000, ry_min = 30000, rz_min = 30000;
 
     delay(delayBefore);
     if (console)
@@ -79,10 +79,38 @@ void MPU6050::calcGyroOffsets(bool console, uint16_t delayBefore, uint16_t delay
         ry = wire->read() << 8 | wire->read();
         rz = wire->read() << 8 | wire->read();
 
+        if (rx > rx_max)
+        {
+            rx_max = rx;
+        }
+        if (ry > ry_max)
+        {
+            ry_max = ry;
+        }
+        if (rz > rz_max)
+        {
+            rz_max = rz;
+        }
+        if (rx < rx_min)
+        {
+            rx_min = rx;
+        }
+        if (ry < ry_min)
+        {
+            ry_min = ry;
+        }
+        if (rz < rz_min)
+        {
+            rz_min = rz;
+        }
+
         x += ((float)rx) / 65.5;
         y += ((float)ry) / 65.5;
         z += ((float)rz) / 65.5;
     }
+    gyroXerror = rx_max - rx_min;
+    gyroYerror = ry_max - ry_min;
+    gyroZerror = rz_max - rz_min;
     gyroXoffset = x / 3000;
     gyroYoffset = y / 3000;
     gyroZoffset = z / 3000;

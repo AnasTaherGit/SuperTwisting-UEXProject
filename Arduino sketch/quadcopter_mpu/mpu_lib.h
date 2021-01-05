@@ -39,9 +39,9 @@ public:
     int16_t getAccErrorY() { return accelYerror; };
     int16_t getAccErrorZ() { return accelZerror; };
 
-    int16_t getGyrErrorX() { return gyrXerror; };
-    int16_t getGyrErrorY() { return gyrYerror; };
-    int16_t getGyrErrorZ() { return gyrZerror; };
+    int16_t getGyrErrorX() { return gyroXerror; };
+    int16_t getGyrErrorY() { return gyroYerror; };
+    int16_t getGyrErrorZ() { return gyroZerror; };
 
     float getAccX() { return accX; };
     float getAccY() { return accY; };
@@ -82,7 +82,7 @@ private:
     int16_t rawAccX, rawAccY, rawAccZ,
         rawGyroX, rawGyroY, rawGyroZ,
         accelXerror, accelYerror, accelZerror,
-        gyrXerror, gyrYerror, gyrZerror;
+        gyroXerror, gyroYerror, gyroZerror;
 
     float gyroXoffset, gyroYoffset, gyroZoffset;
 
