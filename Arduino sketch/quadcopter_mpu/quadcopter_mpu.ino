@@ -29,9 +29,9 @@ void setup()
 void loop()
 {
     get_imu_readings();
-    Serial.print(mpu.getRawGyroX());
+    Serial.print(mpu.getAngleX());
     Serial.print(" ");
-    Serial.println(rawGyroX);
+    Serial.println(mpu.getAngleY());
 }
 
 void initialize_filters()
