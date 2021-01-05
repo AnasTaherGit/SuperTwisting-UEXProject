@@ -9,5 +9,5 @@ slprj
 Pitch_compute_*
 *_ert_rtw
 test.m
-Quadcopter*
 
+Arduino sketch/quadcopter_mpu/a.py
