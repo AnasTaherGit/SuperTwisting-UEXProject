@@ -1,1 +1,3 @@
-
+- Le dossier __*Simulation Matlab*__ contient le modèle crée pour la simulation ainsi que le code Arduino pour la simulation HIL.
+- Le dossier __*Methode Acquisition*__ contient un model Matlab qui permet l'acquisition et le filtrage depuis le capteur ainsi qu'un librairie Arduino conçue pour l'utilisation du MPU6050 et d’une autre librairie de l'implémentation d'un filtre Kalman de premier ordre.
+- Le dossier __*Misc*__ contient les codes réalisés qui ne font pas parties des objectifs du projet.
