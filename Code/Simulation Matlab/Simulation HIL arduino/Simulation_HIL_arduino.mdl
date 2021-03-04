@@ -1,0 +1,2340 @@
+Model {
+  Name			  "Simulation_HIL_arduino"
+  Version		  8.3
+  SavedCharacterEncoding  "windows-1252"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "6.2"
+    NumModelReferences	    0
+    NumTestPointedSignals   1
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "Simulation_HIL_arduino/Serial Receive"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+  }
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [-8.0, -8.0, 1936.0, 1056.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1882.0, 814.0]
+	ZoomFactor		[1.2456418383518224]
+	Offset			[-534.81687530314639, 461.43066157760813]
+      }
+    }
+  }
+  PhysicalModelingChecksum "2360365101"
+  PhysicalModelingParameterChecksum "2321901651"
+  PhysicalModelingProducts "SimMechanics|Simscape"
+  Created		  "Wed May 15 13:17:15 2019"
+  Creator		  "Avell"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Abdou"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Mar 04 20:41:00 2021"
+  RTWModifiedTimeStamp	  536791260
+  ModelVersionFormat	  "1.%<AutoIncrement:0>"
+  SampleTimeColors	  on
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    8
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "Simulation_HIL_arduino"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "Simulation_HIL_arduino"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  Object {
+    $PropName		    "InstrumentedSignals"
+    $ObjectID		    9
+    $ClassName		    "Simulink.HMI.InstrumentedSignals"
+    Array {
+      Type		      "Struct"
+      Dimension		      1
+      MATStruct {
+	UUID			"fc777283-12eb-482c-89f7-93fbb3e73c0f"
+	BlockPath_		"Serial Receive"
+	SID_			"2"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+      }
+      PropName		      "Persistence"
+    }
+  }
+  Object {
+    $PropName		    "StreamingClients"
+    $ObjectID		    10
+    $ClassName		    "Simulink.HMI.StreamingClients"
+    Array {
+      Type		      "Struct"
+      Dimension		      1
+      MATStruct {
+	UUID			"9bec1ced-47e5-461d-981d-93068f7046f8"
+	Array {
+	  Type			  "Cell"
+	  Dimension		  0
+	  PropName		  "ModelPath_"
+	}
+	Array {
+	  Type			  "Cell"
+	  Dimension		  0
+	  PropName		  "ModelPathSID_"
+	}
+	SourceModel_		""
+	SignalUUID_		"fc777283-12eb-482c-89f7-93fbb3e73c0f"
+	ObserverType_		"hmi_web_widget_observer"
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "ObserverParams_"
+	}
+	UpdateRate_		[1U]
+	DimensionChannel_	[1U]
+	ObserveImaginaryPart_	[0]
+	BusLeafPath_		""
+      }
+      PropName		      "Persistence"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dwe"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  off
+  CovForceBlockReductionOff on
+  CovEnableCumulative	  on
+  covSaveCumulativeToWorkspaceVar off
+  CovSaveSingleToWorkspaceVar off
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  on
+  CovSFcnEnable		  on
+  CovBoundaryAbsTol	  0.000010
+  CovBoundaryRelTol	  0.010000
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      11
+      Version		      "1.14.2"
+      Array {
+	Type			"Handle"
+	Dimension		10
+	Simulink.SolverCC {
+	  $ObjectID		  12
+	  Version		  "1.14.2"
+	  Components		  []
+	  StartTime		  "0.0"
+	  StopTime		  "inf"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "SingleTasking"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  SolverName		  ode45
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  Solver		  ode45
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  13
+	  Version		  "1.14.2"
+	  Components		  []
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  off
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "StructureWithTime"
+	  SignalLoggingSaveFormat "Dataset"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  VisualizeSimOutput	  on
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  14
+	  Version		  "1.14.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    Cell		    "EfficientTunableParamExpr"
+	    PropName		    "DisabledProps"
+	  }
+	  Components		  []
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  CachingGlobalReferences off
+	  GlobalBufferReuse	  on
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  128
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  15
+	  Version		  "1.14.2"
+	  Components		  []
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Simplified"
+	  MergeDetectMultiDrivingBlocksExec "error"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "none"
+	  InheritedTsInSrcMsg	  "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  FcnCallInpInsideContextMsg "EnableAllAsError"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "error"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "none"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "error"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "error"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	  ModelReferenceCSMismatchMessage "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  16
+	  Version		  "1.14.2"
+	  Components		  []
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  64
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "Float"
+	  ProdIntDivRoundTo	  "Zero"
+	  ProdEndianess		  "LittleEndian"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "Specified"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  17
+	  Version		  "1.14.2"
+	  Components		  []
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel on
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  18
+	  Version		  "1.14.2"
+	  Components		  []
+	  SFSimEcho		  on
+	  SimCtrlC		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  19
+	  Version		  "1.14.2"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    16
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "PortableWordSizes"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateMissedCodeReplacementReport"
+	    Cell		    "GenerateErtSFunction"
+	    Cell		    "CreateSILPILBlock"
+	    Cell		    "CodeExecutionProfiling"
+	    Cell		    "CodeProfilingSaveOptions"
+	    Cell		    "CodeProfilingInstrumentation"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  GenerateReport	  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      20
+	      Version		      "1.14.2"
+	      Array {
+		Type			"Cell"
+		Dimension		28
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"BlockCommentType"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InternalIdentifier"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrModelFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"CustomSymbolStrUtil"
+		Cell			"CustomSymbolStrEmxType"
+		Cell			"CustomSymbolStrEmxFcn"
+		Cell			"CustomUserTokenString"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      Components	      []
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      CommentStyle	      "Auto"
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      21
+	      Version		      "1.14.2"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"ExistingSharedCode"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"GenerateAllocFcn"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"RemoveDisableFunc"
+		Cell			"RemoveResetFunc"
+		Cell			"PreserveStateflowLocalDataDimensions"
+		Cell			"CombineOutputUpdateFcns"
+		PropName		"DisabledProps"
+	      }
+	      Components	      []
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "NOT IN USE"
+	      TargetLangStandard      "C99 (ISO)"
+	      CodeReplacementLibrary  "None"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      CodeInterfacePackaging  "Nonreusable function"
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    on
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      GenerateAllocFcn	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	      MultiInstanceErrorCode  "Error"
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  23
+	  Version		  "1.14.2"
+	  Description		  "HDL Coder custom configuration component"
+	  Components		  []
+	  Name			  "HDL Coder"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    " "
+	    PropName		    "HDLConfigFile"
+	  }
+	  HDLCActiveTab		  "0"
+	}
+	SSC.SimscapeCC {
+	  $ObjectID		  24
+	  Version		  "1.14.2"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    1
+	    simmechanics.ConfigurationSet {
+	      $ObjectID		      25
+	      Version		      "1.14.2"
+	      Description	      "Simscape Multibody"
+	      Array {
+		Type			"Handle"
+		Dimension		2
+		simmechanics.DiagnosticsConfigSet {
+		  $ObjectID		  26
+		  Version		  "20.1.0"
+		  DisabledProps		  []
+		  Description		  "Diagnostics"
+		  Components		  []
+		  Name			  "DiagnosticsConfigSet"
+		  SimMechanicsInvalidVisualProperty "warning"
+		  SimMechanicsCrossSectionNullEdge "warning"
+		  SimMechanicsUnconnectedFramePorts "warning"
+		  SimMechanicsUnconnectedGeometryPorts "warning"
+		  SimMechanicsRedundantBlock "warning"
+		  SimMechanicsConflictingReferenceFrames "warning"
+		  SimMechanicsRigidlyBoundBlock	"error"
+		  SimMechanicsUnsatisfiedHighPriorityTargets "warning"
+		  SimMechanicsJointTargetOverSpecification "error"
+		}
+		simmechanics.ExplorerConfigSet {
+		  $ObjectID		  27
+		  Version		  "20.1.0"
+		  DisabledProps		  []
+		  Description		  "Explorer"
+		  Components		  []
+		  Name			  "ExplorerConfigSet"
+		  SimMechanicsOpenEditorOnUpdate on
+		  InternalSimMechanicsExplorerSettings ""
+		}
+		PropName		"Components"
+	      }
+	      Name		      SimMechanics2G
+	    }
+	    PropName		    "Components"
+	  }
+	  Name			  "Simscape"
+	  EditingMode		  "Full"
+	  ExplicitSolverDiagnosticOptions "warning"
+	  GlobalZcOffDiagnosticOptions "warning"
+	  SimscapeNormalizeSystem on
+	  SimscapeNominalValues	  "[{\"value\":\"1\",\"unit\":\"A\"},{\"value\":\"1\",\"unit\":\"bar\"},{\"value\":\"1\",\"un"
+	  "it\":\"cm^2\"},{\"value\":\"1\",\"unit\":\"cm^3/s\"},{\"value\":\"1\",\"unit\":\"kJ/kg\"},{\"value\":\"1\",\"unit\""
+	  ":\"kW\"},{\"value\":\"1\",\"unit\":\"l\"},{\"value\":\"1\",\"unit\":\"N\"},{\"value\":\"1\",\"unit\":\"N*m\"},{\"va"
+	  "lue\":\"1\",\"unit\":\"V\"}]"
+	  SimscapeLogType	  "none"
+	  SimscapeLogSimulationStatistics off
+	  SimscapeLogToSDI	  off
+	  SimscapeLogOpenViewer	  off
+	  SimscapeLogName	  "simlog"
+	  SimscapeLogDecimation	  1
+	  SimscapeLogLimitData	  on
+	  SimscapeLogDataHistory  5000
+	  SimscapeUseOperatingPoints off
+	  SimscapeOperatingPoint  ""
+	  SelectedTab		  ""
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    [ 145, 177, 1135, 887 ]
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    11
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    28
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "left"
+    VerticalAlignment	    "top"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via back propagation"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      Lockdown		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ManualSwitch
+      CurrentSetting	      "1"
+      varsize		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
+  }
+  System {
+    Name		    "Simulation_HIL_arduino"
+    Location		    [-8, -8, 1928, 1048]
+    Open		    off
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "125"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "91"
+    Block {
+      BlockType		      Reference
+      Name		      "Bearing Joint"
+      SID		      "70"
+      Ports		      [0, 0, 0, 0, 0, 2, 3]
+      Position		      [45, 525, 85, 565]
+      ZOrder		      364
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Joints/Bearing Joint"
+      SourceType	      "Bearing Joint"
+      LogSimulationData	      off
+      JointMode		      "Normal"
+      SenseConstraintForce    "off"
+      SenseConstraintForceX   "off"
+      SenseConstraintForceY   "off"
+      SenseConstraintForceZ   "off"
+      SenseConstraintTorque   "off"
+      SenseConstraintTorqueX  "off"
+      SenseConstraintTorqueY  "off"
+      SenseConstraintTorqueZ  "off"
+      SenseTotalForce	      "off"
+      SenseTotalForceX	      "off"
+      SenseTotalForceY	      "off"
+      SenseTotalForceZ	      "off"
+      SenseTotalTorque	      "off"
+      SenseTotalTorqueX	      "off"
+      SenseTotalTorqueY	      "off"
+      SenseTotalTorqueZ	      "off"
+      CompositeWrenchDir      "FollowerOnBase"
+      CompositeWrenchFrame    "BaseFrame"
+      PzEquilibriumPosition   "0"
+      PzEquilibriumPositionUnits "m"
+      PzEquilibriumPosition_conf "compiletime"
+      PzSpringStiffness	      "0"
+      PzSpringStiffnessUnits  "N/m"
+      PzSpringStiffness_conf  "compiletime"
+      PzDampingCoefficient    "0"
+      PzDampingCoefficientUnits	"N/(m/s)"
+      PzDampingCoefficient_conf	"compiletime"
+      PzTorqueActuationMode   "NoTorque"
+      PzMotionActuationMode   "ComputedMotion"
+      PzSensePosition	      "off"
+      PzSenseVelocity	      "off"
+      PzSenseAcceleration     "off"
+      PzSenseTorqueForce      "off"
+      PzSenseLowerLimitTorqueForce "off"
+      PzSenseUpperLimitTorqueForce "off"
+      PzLowerLimitSpecify     "off"
+      PzLowerLimitBound	      "-1"
+      PzLowerLimitBoundUnits  "m"
+      PzLowerLimitBound_conf  "compiletime"
+      PzLowerLimitStiffness   "1e6"
+      PzLowerLimitStiffnessUnits "N/m"
+      PzLowerLimitStiffness_conf "compiletime"
+      PzLowerLimitDamping     "1e3"
+      PzLowerLimitDampingUnits "N/(m/s)"
+      PzLowerLimitDamping_conf "compiletime"
+      PzLowerLimitTransitionRegionWidth	"1e-4"
+      PzLowerLimitTransitionRegionWidthUnits "m"
+      PzLowerLimitTransitionRegionWidth_conf "compiletime"
+      PzUpperLimitSpecify     "off"
+      PzUpperLimitBound	      "1"
+      PzUpperLimitBoundUnits  "m"
+      PzUpperLimitBound_conf  "compiletime"
+      PzUpperLimitStiffness   "1e6"
+      PzUpperLimitStiffnessUnits "N/m"
+      PzUpperLimitStiffness_conf "compiletime"
+      PzUpperLimitDamping     "1e3"
+      PzUpperLimitDampingUnits "N/(m/s)"
+      PzUpperLimitDamping_conf "compiletime"
+      PzUpperLimitTransitionRegionWidth	"1e-4"
+      PzUpperLimitTransitionRegionWidthUnits "m"
+      PzUpperLimitTransitionRegionWidth_conf "compiletime"
+      PzPositionTargetSpecify "off"
+      PzPositionTargetPriority "High"
+      PzPositionTargetValue   "0"
+      PzPositionTargetValueUnits "m"
+      PzPositionTargetValue_conf "compiletime"
+      PzVelocityTargetSpecify "off"
+      PzVelocityTargetPriority "High"
+      PzVelocityTargetValue   "0"
+      PzVelocityTargetValueUnits "m/s"
+      PzVelocityTargetValue_conf "compiletime"
+      RxEquilibriumPosition   "0"
+      RxEquilibriumPositionUnits "deg"
+      RxEquilibriumPosition_conf "compiletime"
+      RxSpringStiffness	      "0"
+      RxSpringStiffnessUnits  "N*m/deg"
+      RxSpringStiffness_conf  "compiletime"
+      RxDampingCoefficient    "0"
+      RxDampingCoefficientUnits	"N*m/(deg/s)"
+      RxDampingCoefficient_conf	"compiletime"
+      RxTorqueActuationMode   "NoTorque"
+      RxMotionActuationMode   "ComputedMotion"
+      RxSensePosition	      "off"
+      RxSenseVelocity	      "off"
+      RxSenseAcceleration     "off"
+      RxSenseTorqueForce      "off"
+      RxSenseLowerLimitTorqueForce "off"
+      RxSenseUpperLimitTorqueForce "off"
+      RxLowerLimitSpecify     "on"
+      RxLowerLimitBound	      "-1"
+      RxLowerLimitBoundUnits  "deg"
+      RxLowerLimitBound_conf  "compiletime"
+      RxLowerLimitStiffness   "1e4"
+      RxLowerLimitStiffnessUnits "N*m/deg"
+      RxLowerLimitStiffness_conf "compiletime"
+      RxLowerLimitDamping     "10"
+      RxLowerLimitDampingUnits "N*m/(deg/s)"
+      RxLowerLimitDamping_conf "compiletime"
+      RxLowerLimitTransitionRegionWidth	"0.1"
+      RxLowerLimitTransitionRegionWidthUnits "deg"
+      RxLowerLimitTransitionRegionWidth_conf "compiletime"
+      RxUpperLimitSpecify     "on"
+      RxUpperLimitBound	      "1"
+      RxUpperLimitBoundUnits  "deg"
+      RxUpperLimitBound_conf  "compiletime"
+      RxUpperLimitStiffness   "1e4"
+      RxUpperLimitStiffnessUnits "N*m/deg"
+      RxUpperLimitStiffness_conf "compiletime"
+      RxUpperLimitDamping     "10"
+      RxUpperLimitDampingUnits "N*m/(deg/s)"
+      RxUpperLimitDamping_conf "compiletime"
+      RxUpperLimitTransitionRegionWidth	"0.1"
+      RxUpperLimitTransitionRegionWidthUnits "deg"
+      RxUpperLimitTransitionRegionWidth_conf "compiletime"
+      RxPositionTargetSpecify "off"
+      RxPositionTargetPriority "High"
+      RxPositionTargetValue   "0"
+      RxPositionTargetValueUnits "deg"
+      RxPositionTargetValue_conf "compiletime"
+      RxVelocityTargetSpecify "off"
+      RxVelocityTargetPriority "High"
+      RxVelocityTargetValue   "0"
+      RxVelocityTargetValueUnits "deg/s"
+      RxVelocityTargetValue_conf "compiletime"
+      RyEquilibriumPosition   "0"
+      RyEquilibriumPositionUnits "deg"
+      RyEquilibriumPosition_conf "compiletime"
+      RySpringStiffness	      "0"
+      RySpringStiffnessUnits  "N*m/deg"
+      RySpringStiffness_conf  "compiletime"
+      RyDampingCoefficient    "0"
+      RyDampingCoefficientUnits	"N*m/(deg/s)"
+      RyDampingCoefficient_conf	"compiletime"
+      RyTorqueActuationMode   "NoTorque"
+      RyMotionActuationMode   "ComputedMotion"
+      RySensePosition	      "off"
+      RySenseVelocity	      "off"
+      RySenseAcceleration     "off"
+      RySenseTorqueForce      "off"
+      RySenseLowerLimitTorqueForce "off"
+      RySenseUpperLimitTorqueForce "off"
+      RyLowerLimitSpecify     "off"
+      RyLowerLimitBound	      "-90"
+      RyLowerLimitBoundUnits  "deg"
+      RyLowerLimitBound_conf  "compiletime"
+      RyLowerLimitStiffness   "1e4"
+      RyLowerLimitStiffnessUnits "N*m/deg"
+      RyLowerLimitStiffness_conf "compiletime"
+      RyLowerLimitDamping     "10"
+      RyLowerLimitDampingUnits "N*m/(deg/s)"
+      RyLowerLimitDamping_conf "compiletime"
+      RyLowerLimitTransitionRegionWidth	"0.1"
+      RyLowerLimitTransitionRegionWidthUnits "deg"
+      RyLowerLimitTransitionRegionWidth_conf "compiletime"
+      RyUpperLimitSpecify     "off"
+      RyUpperLimitBound	      "90"
+      RyUpperLimitBoundUnits  "deg"
+      RyUpperLimitBound_conf  "compiletime"
+      RyUpperLimitStiffness   "1e4"
+      RyUpperLimitStiffnessUnits "N*m/deg"
+      RyUpperLimitStiffness_conf "compiletime"
+      RyUpperLimitDamping     "10"
+      RyUpperLimitDampingUnits "N*m/(deg/s)"
+      RyUpperLimitDamping_conf "compiletime"
+      RyUpperLimitTransitionRegionWidth	"0.1"
+      RyUpperLimitTransitionRegionWidthUnits "deg"
+      RyUpperLimitTransitionRegionWidth_conf "compiletime"
+      RyPositionTargetSpecify "off"
+      RyPositionTargetPriority "High"
+      RyPositionTargetValue   "0"
+      RyPositionTargetValueUnits "deg"
+      RyPositionTargetValue_conf "compiletime"
+      RyVelocityTargetSpecify "off"
+      RyVelocityTargetPriority "High"
+      RyVelocityTargetValue   "0"
+      RyVelocityTargetValueUnits "deg/s"
+      RyVelocityTargetValue_conf "compiletime"
+      RzEquilibriumPosition   "0"
+      RzEquilibriumPositionUnits "deg"
+      RzEquilibriumPosition_conf "compiletime"
+      RzSpringStiffness	      "0"
+      RzSpringStiffnessUnits  "N*m/deg"
+      RzSpringStiffness_conf  "compiletime"
+      RzDampingCoefficient    "0"
+      RzDampingCoefficientUnits	"N*m/(deg/s)"
+      RzDampingCoefficient_conf	"compiletime"
+      RzTorqueActuationMode   "InputTorque"
+      RzMotionActuationMode   "ComputedMotion"
+      RzSensePosition	      "on"
+      RzSenseVelocity	      "on"
+      RzSenseAcceleration     "off"
+      RzSenseTorqueForce      "off"
+      RzSenseLowerLimitTorqueForce "off"
+      RzSenseUpperLimitTorqueForce "off"
+      RzLowerLimitSpecify     "off"
+      RzLowerLimitBound	      "-90"
+      RzLowerLimitBoundUnits  "deg"
+      RzLowerLimitBound_conf  "compiletime"
+      RzLowerLimitStiffness   "1e4"
+      RzLowerLimitStiffnessUnits "N*m/deg"
+      RzLowerLimitStiffness_conf "compiletime"
+      RzLowerLimitDamping     "10"
+      RzLowerLimitDampingUnits "N*m/(deg/s)"
+      RzLowerLimitDamping_conf "compiletime"
+      RzLowerLimitTransitionRegionWidth	"0.1"
+      RzLowerLimitTransitionRegionWidthUnits "deg"
+      RzLowerLimitTransitionRegionWidth_conf "compiletime"
+      RzUpperLimitSpecify     "off"
+      RzUpperLimitBound	      "90"
+      RzUpperLimitBoundUnits  "deg"
+      RzUpperLimitBound_conf  "compiletime"
+      RzUpperLimitStiffness   "1e4"
+      RzUpperLimitStiffnessUnits "N*m/deg"
+      RzUpperLimitStiffness_conf "compiletime"
+      RzUpperLimitDamping     "10"
+      RzUpperLimitDampingUnits "N*m/(deg/s)"
+      RzUpperLimitDamping_conf "compiletime"
+      RzUpperLimitTransitionRegionWidth	"0.1"
+      RzUpperLimitTransitionRegionWidthUnits "deg"
+      RzUpperLimitTransitionRegionWidth_conf "compiletime"
+      RzPositionTargetSpecify "on"
+      RzPositionTargetPriority "High"
+      RzPositionTargetValue   "30"
+      RzPositionTargetValueUnits "deg"
+      RzPositionTargetValue_conf "compiletime"
+      RzVelocityTargetSpecify "off"
+      RzVelocityTargetPriority "High"
+      RzVelocityTargetValue   "0"
+      RzVelocityTargetValueUnits "deg/s"
+      RzVelocityTargetValue_conf "compiletime"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Bearing Joint1"
+      SID		      "71"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [45, 595, 85, 635]
+      ZOrder		      365
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Joints/Bearing Joint"
+      SourceType	      "Bearing Joint"
+      LogSimulationData	      off
+      JointMode		      "Normal"
+      SenseConstraintForce    "off"
+      SenseConstraintForceX   "off"
+      SenseConstraintForceY   "off"
+      SenseConstraintForceZ   "off"
+      SenseConstraintTorque   "off"
+      SenseConstraintTorqueX  "off"
+      SenseConstraintTorqueY  "off"
+      SenseConstraintTorqueZ  "off"
+      SenseTotalForce	      "off"
+      SenseTotalForceX	      "off"
+      SenseTotalForceY	      "off"
+      SenseTotalForceZ	      "off"
+      SenseTotalTorque	      "off"
+      SenseTotalTorqueX	      "off"
+      SenseTotalTorqueY	      "off"
+      SenseTotalTorqueZ	      "off"
+      CompositeWrenchDir      "FollowerOnBase"
+      CompositeWrenchFrame    "BaseFrame"
+      PzEquilibriumPosition   "0"
+      PzEquilibriumPositionUnits "m"
+      PzEquilibriumPosition_conf "compiletime"
+      PzSpringStiffness	      "0"
+      PzSpringStiffnessUnits  "N/m"
+      PzSpringStiffness_conf  "compiletime"
+      PzDampingCoefficient    "0"
+      PzDampingCoefficientUnits	"N/(m/s)"
+      PzDampingCoefficient_conf	"compiletime"
+      PzTorqueActuationMode   "NoTorque"
+      PzMotionActuationMode   "ComputedMotion"
+      PzSensePosition	      "off"
+      PzSenseVelocity	      "off"
+      PzSenseAcceleration     "off"
+      PzSenseTorqueForce      "off"
+      PzSenseLowerLimitTorqueForce "off"
+      PzSenseUpperLimitTorqueForce "off"
+      PzLowerLimitSpecify     "off"
+      PzLowerLimitBound	      "-1"
+      PzLowerLimitBoundUnits  "m"
+      PzLowerLimitBound_conf  "compiletime"
+      PzLowerLimitStiffness   "1e6"
+      PzLowerLimitStiffnessUnits "N/m"
+      PzLowerLimitStiffness_conf "compiletime"
+      PzLowerLimitDamping     "1e3"
+      PzLowerLimitDampingUnits "N/(m/s)"
+      PzLowerLimitDamping_conf "compiletime"
+      PzLowerLimitTransitionRegionWidth	"1e-4"
+      PzLowerLimitTransitionRegionWidthUnits "m"
+      PzLowerLimitTransitionRegionWidth_conf "compiletime"
+      PzUpperLimitSpecify     "off"
+      PzUpperLimitBound	      "1"
+      PzUpperLimitBoundUnits  "m"
+      PzUpperLimitBound_conf  "compiletime"
+      PzUpperLimitStiffness   "1e6"
+      PzUpperLimitStiffnessUnits "N/m"
+      PzUpperLimitStiffness_conf "compiletime"
+      PzUpperLimitDamping     "1e3"
+      PzUpperLimitDampingUnits "N/(m/s)"
+      PzUpperLimitDamping_conf "compiletime"
+      PzUpperLimitTransitionRegionWidth	"1e-4"
+      PzUpperLimitTransitionRegionWidthUnits "m"
+      PzUpperLimitTransitionRegionWidth_conf "compiletime"
+      PzPositionTargetSpecify "off"
+      PzPositionTargetPriority "High"
+      PzPositionTargetValue   "0"
+      PzPositionTargetValueUnits "m"
+      PzPositionTargetValue_conf "compiletime"
+      PzVelocityTargetSpecify "off"
+      PzVelocityTargetPriority "High"
+      PzVelocityTargetValue   "0"
+      PzVelocityTargetValueUnits "m/s"
+      PzVelocityTargetValue_conf "compiletime"
+      RxEquilibriumPosition   "0"
+      RxEquilibriumPositionUnits "deg"
+      RxEquilibriumPosition_conf "compiletime"
+      RxSpringStiffness	      "0"
+      RxSpringStiffnessUnits  "N*m/deg"
+      RxSpringStiffness_conf  "compiletime"
+      RxDampingCoefficient    "0"
+      RxDampingCoefficientUnits	"N*m/(deg/s)"
+      RxDampingCoefficient_conf	"compiletime"
+      RxTorqueActuationMode   "NoTorque"
+      RxMotionActuationMode   "ComputedMotion"
+      RxSensePosition	      "off"
+      RxSenseVelocity	      "off"
+      RxSenseAcceleration     "off"
+      RxSenseTorqueForce      "off"
+      RxSenseLowerLimitTorqueForce "off"
+      RxSenseUpperLimitTorqueForce "off"
+      RxLowerLimitSpecify     "on"
+      RxLowerLimitBound	      "-1"
+      RxLowerLimitBoundUnits  "deg"
+      RxLowerLimitBound_conf  "compiletime"
+      RxLowerLimitStiffness   "1e4"
+      RxLowerLimitStiffnessUnits "N*m/deg"
+      RxLowerLimitStiffness_conf "compiletime"
+      RxLowerLimitDamping     "10"
+      RxLowerLimitDampingUnits "N*m/(deg/s)"
+      RxLowerLimitDamping_conf "compiletime"
+      RxLowerLimitTransitionRegionWidth	"0.1"
+      RxLowerLimitTransitionRegionWidthUnits "deg"
+      RxLowerLimitTransitionRegionWidth_conf "compiletime"
+      RxUpperLimitSpecify     "on"
+      RxUpperLimitBound	      "1"
+      RxUpperLimitBoundUnits  "deg"
+      RxUpperLimitBound_conf  "compiletime"
+      RxUpperLimitStiffness   "1e4"
+      RxUpperLimitStiffnessUnits "N*m/deg"
+      RxUpperLimitStiffness_conf "compiletime"
+      RxUpperLimitDamping     "10"
+      RxUpperLimitDampingUnits "N*m/(deg/s)"
+      RxUpperLimitDamping_conf "compiletime"
+      RxUpperLimitTransitionRegionWidth	"0.1"
+      RxUpperLimitTransitionRegionWidthUnits "deg"
+      RxUpperLimitTransitionRegionWidth_conf "compiletime"
+      RxPositionTargetSpecify "off"
+      RxPositionTargetPriority "High"
+      RxPositionTargetValue   "0"
+      RxPositionTargetValueUnits "deg"
+      RxPositionTargetValue_conf "compiletime"
+      RxVelocityTargetSpecify "off"
+      RxVelocityTargetPriority "High"
+      RxVelocityTargetValue   "0"
+      RxVelocityTargetValueUnits "deg/s"
+      RxVelocityTargetValue_conf "compiletime"
+      RyEquilibriumPosition   "0"
+      RyEquilibriumPositionUnits "deg"
+      RyEquilibriumPosition_conf "compiletime"
+      RySpringStiffness	      "0"
+      RySpringStiffnessUnits  "N*m/deg"
+      RySpringStiffness_conf  "compiletime"
+      RyDampingCoefficient    "0"
+      RyDampingCoefficientUnits	"N*m/(deg/s)"
+      RyDampingCoefficient_conf	"compiletime"
+      RyTorqueActuationMode   "NoTorque"
+      RyMotionActuationMode   "ComputedMotion"
+      RySensePosition	      "off"
+      RySenseVelocity	      "off"
+      RySenseAcceleration     "off"
+      RySenseTorqueForce      "off"
+      RySenseLowerLimitTorqueForce "off"
+      RySenseUpperLimitTorqueForce "off"
+      RyLowerLimitSpecify     "off"
+      RyLowerLimitBound	      "-90"
+      RyLowerLimitBoundUnits  "deg"
+      RyLowerLimitBound_conf  "compiletime"
+      RyLowerLimitStiffness   "1e4"
+      RyLowerLimitStiffnessUnits "N*m/deg"
+      RyLowerLimitStiffness_conf "compiletime"
+      RyLowerLimitDamping     "10"
+      RyLowerLimitDampingUnits "N*m/(deg/s)"
+      RyLowerLimitDamping_conf "compiletime"
+      RyLowerLimitTransitionRegionWidth	"0.1"
+      RyLowerLimitTransitionRegionWidthUnits "deg"
+      RyLowerLimitTransitionRegionWidth_conf "compiletime"
+      RyUpperLimitSpecify     "off"
+      RyUpperLimitBound	      "90"
+      RyUpperLimitBoundUnits  "deg"
+      RyUpperLimitBound_conf  "compiletime"
+      RyUpperLimitStiffness   "1e4"
+      RyUpperLimitStiffnessUnits "N*m/deg"
+      RyUpperLimitStiffness_conf "compiletime"
+      RyUpperLimitDamping     "10"
+      RyUpperLimitDampingUnits "N*m/(deg/s)"
+      RyUpperLimitDamping_conf "compiletime"
+      RyUpperLimitTransitionRegionWidth	"0.1"
+      RyUpperLimitTransitionRegionWidthUnits "deg"
+      RyUpperLimitTransitionRegionWidth_conf "compiletime"
+      RyPositionTargetSpecify "off"
+      RyPositionTargetPriority "High"
+      RyPositionTargetValue   "0"
+      RyPositionTargetValueUnits "deg"
+      RyPositionTargetValue_conf "compiletime"
+      RyVelocityTargetSpecify "off"
+      RyVelocityTargetPriority "High"
+      RyVelocityTargetValue   "0"
+      RyVelocityTargetValueUnits "deg/s"
+      RyVelocityTargetValue_conf "compiletime"
+      RzEquilibriumPosition   "0"
+      RzEquilibriumPositionUnits "deg"
+      RzEquilibriumPosition_conf "compiletime"
+      RzSpringStiffness	      "0"
+      RzSpringStiffnessUnits  "N*m/deg"
+      RzSpringStiffness_conf  "compiletime"
+      RzDampingCoefficient    "0"
+      RzDampingCoefficientUnits	"N*m/(deg/s)"
+      RzDampingCoefficient_conf	"compiletime"
+      RzTorqueActuationMode   "NoTorque"
+      RzMotionActuationMode   "ComputedMotion"
+      RzSensePosition	      "off"
+      RzSenseVelocity	      "off"
+      RzSenseAcceleration     "off"
+      RzSenseTorqueForce      "off"
+      RzSenseLowerLimitTorqueForce "off"
+      RzSenseUpperLimitTorqueForce "off"
+      RzLowerLimitSpecify     "off"
+      RzLowerLimitBound	      "-90"
+      RzLowerLimitBoundUnits  "deg"
+      RzLowerLimitBound_conf  "compiletime"
+      RzLowerLimitStiffness   "1e4"
+      RzLowerLimitStiffnessUnits "N*m/deg"
+      RzLowerLimitStiffness_conf "compiletime"
+      RzLowerLimitDamping     "10"
+      RzLowerLimitDampingUnits "N*m/(deg/s)"
+      RzLowerLimitDamping_conf "compiletime"
+      RzLowerLimitTransitionRegionWidth	"0.1"
+      RzLowerLimitTransitionRegionWidthUnits "deg"
+      RzLowerLimitTransitionRegionWidth_conf "compiletime"
+      RzUpperLimitSpecify     "off"
+      RzUpperLimitBound	      "90"
+      RzUpperLimitBoundUnits  "deg"
+      RzUpperLimitBound_conf  "compiletime"
+      RzUpperLimitStiffness   "1e4"
+      RzUpperLimitStiffnessUnits "N*m/deg"
+      RzUpperLimitStiffness_conf "compiletime"
+      RzUpperLimitDamping     "10"
+      RzUpperLimitDampingUnits "N*m/(deg/s)"
+      RzUpperLimitDamping_conf "compiletime"
+      RzUpperLimitTransitionRegionWidth	"0.1"
+      RzUpperLimitTransitionRegionWidthUnits "deg"
+      RzUpperLimitTransitionRegionWidth_conf "compiletime"
+      RzPositionTargetSpecify "off"
+      RzPositionTargetPriority "High"
+      RzPositionTargetValue   "0"
+      RzPositionTargetValueUnits "deg"
+      RzPositionTargetValue_conf "compiletime"
+      RzVelocityTargetSpecify "off"
+      RzVelocityTargetPriority "High"
+      RzVelocityTargetValue   "0"
+      RzVelocityTargetValueUnits "deg/s"
+      RzVelocityTargetValue_conf "compiletime"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Brick Solid"
+      SID		      "72"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [385, 525, 425, 565]
+      ZOrder		      366
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Body Elements/Solid"
+      SourceType	      "Brick Solid"
+      LogSimulationData	      off
+      GraphicAmbientColor     "[0.15 0.15 0.15 1.0]"
+      GraphicAmbientColor_conf "compiletime"
+      BasedOnType	      "Density"
+      BrickDimensions	      "[50 500 50]"
+      BrickDimensionUnits     "mm"
+      BrickDimensions_conf    "compiletime"
+      CenterOfMass	      "[0 0 0]"
+      CenterOfMassUnits	      "m"
+      CenterOfMass_conf	      "compiletime"
+      GraphicDiffuseColor     "[1.0 0.2 0.2]"
+      GraphicDiffuseColor_conf "compiletime"
+      Density		      "1000"
+      DensityUnits	      "kg/m^3"
+      Density_conf	      "compiletime"
+      DoExposeReferenceFrame  "on"
+      GraphicEmissiveColor    "[0.0 0.0 0.0 1.0]"
+      GraphicEmissiveColor_conf	"compiletime"
+      ExportEntireGeometry    "off"
+      SerializedFrames	      "<Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>GeometricFeature</So"
+      "urce><FeatureName>+z surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>R"
+      "eferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryAx"
+      "is><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><F"
+      "eatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>"
+      MarkerShape	      "Sphere"
+      MarkerSize	      "10"
+      MarkerSize_conf	      "compiletime"
+      GraphicType	      "FromGeometry"
+      InertiaType	      "CalculateFromGeometry"
+      Mass		      "1"
+      MassUnits		      "kg"
+      Mass_conf		      "compiletime"
+      MomentsOfInertia	      "[1 1 1]"
+      MomentsOfInertiaUnits   "kg*m^2"
+      MomentsOfInertia_conf   "compiletime"
+      GraphicOpacity	      "1.0"
+      GraphicOpacity_conf     "compiletime"
+      ProductsOfInertia	      "[0 0 0]"
+      ProductsOfInertiaUnits  "kg*m^2"
+      ProductsOfInertia_conf  "compiletime"
+      GraphicShininess	      "75"
+      GraphicShininess_conf   "compiletime"
+      GraphicSpecularColor    "[0.5 0.5 0.5 1.0]"
+      GraphicSpecularColor_conf	"compiletime"
+      GraphicVisPropType      "SimpleVisualProperties"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Byte Pack1"
+      SID		      "26"
+      Ports		      [1, 1]
+      Position		      [105, 925, 205, 985]
+      ZOrder		      326
+      ForegroundColor	      "red"
+      LibraryVersion	      "5.1"
+      SourceBlock	      "svdutilitieslib/Byte Pack"
+      SourceType	      "Byte pack"
+      maskPackedDataType      "uint32"
+      datatypes		      "{'single'}"
+      byteAlign		      "4"
+      blockPlatform	      "arduinoert"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Cast To Double"
+      SID		      "35"
+      Position		      [475, 1058, 550, 1092]
+      ZOrder		      329
+      ForegroundColor	      "red"
+      OutDataTypeStr	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Cast To Single"
+      SID		      "22"
+      Position		      [-15, 938, 60, 972]
+      ZOrder		      328
+      ForegroundColor	      "red"
+      OutDataTypeStr	      "single"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "73"
+      Position		      [145, 680, 175, 710]
+      ZOrder		      373
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      SID		      "89"
+      Ports		      [1]
+      Position		      [725, 975, 815, 1005]
+      ZOrder		      376
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "External Force\nand Torque"
+      SID		      "74"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [365, 610, 405, 650]
+      ZOrder		      368
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Forces and\nTorques/External Force\nand Torque"
+      SourceType	      "External Force\nand Torque"
+      LogSimulationData	      off
+      ForceResolutionFrame    "AttachedFrame"
+      EnableForceX	      "on"
+      EnableForceY	      "off"
+      EnableForceZ	      "off"
+      EnableForce	      "off"
+      TorqueResolutionFrame   "AttachedFrame"
+      EnableTorqueX	      "off"
+      EnableTorqueY	      "off"
+      EnableTorqueZ	      "off"
+      EnableTorque	      "off"
+    }
+    Block {
+      BlockType		      ManualSwitch
+      Name		      "Manual Switch"
+      SID		      "75"
+      Position		      [220, 622, 250, 658]
+      ZOrder		      372
+      CurrentSetting	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Mechanism\nConfiguration"
+      SID		      "76"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [-160, 675, -120, 715]
+      ZOrder		      362
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Utilities/Mechanism\nConfiguration"
+      SourceType	      "Mechanism\nConfiguration"
+      LogSimulationData	      off
+      UniformGravity	      "Constant"
+      GravityVector	      "[0 0 -9.80665]"
+      GravityVectorUnits      "m/s^2"
+      GravityVector_conf      "compiletime"
+      GravityUnits	      "m/s^2"
+      LinearizationDelta      "0.001"
+      JointModeTransitionNonlinearIterations "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Offset"
+      SID		      "77"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [290, 525, 330, 565]
+      ZOrder		      367
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      SourceType	      "Rigid\nTransform"
+      LogSimulationData	      off
+      TranslationMethod	      "StandardAxis"
+      TranslationStandardOffset	"10"
+      TranslationLengthUnit   "mm"
+      TranslationStandardOffset_conf "compiletime"
+      TranslationStandardAxis "-Y"
+      TranslationCartesianOffset "[0 0 0]"
+      TranslationCartesianOffset_conf "compiletime"
+      TranslationROffset      "0"
+      TranslationROffsetUnits "m"
+      TranslationROffset_conf "compiletime"
+      TranslationZOffset      "0"
+      TranslationZOffsetUnits "m"
+      TranslationZOffset_conf "compiletime"
+      TranslationThetaOffset  "0"
+      TranslationThetaOffsetUnits "deg"
+      TranslationThetaOffset_conf "compiletime"
+      RotationMethod	      "None"
+      RotationAngleUnits      "deg"
+      RotationStandardAxis    "+Y"
+      RotationAngle	      "90"
+      RotationAngle_conf      "compiletime"
+      RotationArbitraryAxis   "[0 0 1]"
+      RotationArbitraryAxis_conf "compiletime"
+      FollAlignAxisA	      "+X"
+      BaseAlignAxisA	      "+Y"
+      FollAlignAxisB	      "+Y"
+      BaseAlignAxisB	      "+Z"
+      RotationSequenceAxes    "FollowerAxes"
+      RotationSequence	      "XYX"
+      RotationSequenceAngles  "[0 0 0]"
+      RotationSequenceAnglesUnits "deg"
+      RotationSequenceAngles_conf "compiletime"
+      RotationMatrix	      "[1 0 0; 0 1 0; 0 0 1]"
+      RotationMatrix_conf     "compiletime"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Offset1"
+      SID		      "78"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [455, 525, 495, 565]
+      ZOrder		      369
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      SourceType	      "Rigid\nTransform"
+      LogSimulationData	      off
+      TranslationMethod	      "StandardAxis"
+      TranslationStandardOffset	"240"
+      TranslationLengthUnit   "mm"
+      TranslationStandardOffset_conf "compiletime"
+      TranslationStandardAxis "-Y"
+      TranslationCartesianOffset "[0 0 0]"
+      TranslationCartesianOffset_conf "compiletime"
+      TranslationROffset      "0"
+      TranslationROffsetUnits "m"
+      TranslationROffset_conf "compiletime"
+      TranslationZOffset      "0"
+      TranslationZOffsetUnits "m"
+      TranslationZOffset_conf "compiletime"
+      TranslationThetaOffset  "0"
+      TranslationThetaOffsetUnits "deg"
+      TranslationThetaOffset_conf "compiletime"
+      RotationMethod	      "None"
+      RotationAngleUnits      "deg"
+      RotationStandardAxis    "+Y"
+      RotationAngle	      "90"
+      RotationAngle_conf      "compiletime"
+      RotationArbitraryAxis   "[0 0 1]"
+      RotationArbitraryAxis_conf "compiletime"
+      FollAlignAxisA	      "+X"
+      BaseAlignAxisA	      "+Y"
+      FollAlignAxisB	      "+Y"
+      BaseAlignAxisB	      "+Z"
+      RotationSequenceAxes    "FollowerAxes"
+      RotationSequence	      "XYX"
+      RotationSequenceAngles  "[0 0 0]"
+      RotationSequenceAnglesUnits "deg"
+      RotationSequenceAngles_conf "compiletime"
+      RotationMatrix	      "[1 0 0; 0 1 0; 0 0 1]"
+      RotationMatrix_conf     "compiletime"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PS-Simulink\nConverter"
+      SID		      "87"
+      Ports		      [0, 1, 0, 0, 0, 1]
+      Position		      [-350, 947, -335, 963]
+      ZOrder		      374
+      LibraryVersion	      "5.0"
+      SourceBlock	      "nesl_utility/PS-Simulink\nConverter"
+      SourceType	      "PS-Simulink\nConverter"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ContentPreviewEnabled   on
+      PhysicalDomain	      "network_engine_domain"
+      SubClassName	      "ps_output"
+      LeftPortType	      "input"
+      RightPortType	      "output"
+      PseudoPeriodic	      off
+      Frequencies	      "[]"
+      AffineConversion	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Rigid\nTransform"
+      SID		      "79"
+      Ports		      [0, 0, 0, 0, 0, 1, 1]
+      Position		      [-70, 515, -30, 555]
+      ZOrder		      361
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Frames and\nTransforms/Rigid\nTransform"
+      SourceType	      "Rigid\nTransform"
+      LogSimulationData	      off
+      TranslationMethod	      "None"
+      TranslationStandardOffset	"0"
+      TranslationLengthUnit   "m"
+      TranslationStandardOffset_conf "compiletime"
+      TranslationStandardAxis "+Z"
+      TranslationCartesianOffset "[0 0 0]"
+      TranslationCartesianOffset_conf "compiletime"
+      TranslationROffset      "0"
+      TranslationROffsetUnits "m"
+      TranslationROffset_conf "compiletime"
+      TranslationZOffset      "0"
+      TranslationZOffsetUnits "m"
+      TranslationZOffset_conf "compiletime"
+      TranslationThetaOffset  "0"
+      TranslationThetaOffsetUnits "deg"
+      TranslationThetaOffset_conf "compiletime"
+      RotationMethod	      "StandardAxis"
+      RotationAngleUnits      "deg"
+      RotationStandardAxis    "+Y"
+      RotationAngle	      "90"
+      RotationAngle_conf      "compiletime"
+      RotationArbitraryAxis   "[0 0 1]"
+      RotationArbitraryAxis_conf "compiletime"
+      FollAlignAxisA	      "+X"
+      BaseAlignAxisA	      "+Y"
+      FollAlignAxisB	      "+Y"
+      BaseAlignAxisB	      "+Z"
+      RotationSequenceAxes    "FollowerAxes"
+      RotationSequence	      "XYX"
+      RotationSequenceAngles  "[0 0 0]"
+      RotationSequenceAnglesUnits "deg"
+      RotationSequenceAngles_conf "compiletime"
+      RotationMatrix	      "[1 0 0; 0 1 0; 0 0 1]"
+      RotationMatrix_conf     "compiletime"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope3"
+      SID		      "34"
+      Ports		      [1]
+      Position		      [765, 1059, 795, 1091]
+      ZOrder		      343
+      ForegroundColor	      "red"
+      NumInputPorts	      "1"
+      Floating		      off
+      Open		      off
+      TimeRange		      auto
+      TickLabels	      OneTimeTick
+      ShowLegends	      off
+      LimitDataPoints	      off
+      MaxDataPoints	      5000
+      SaveToWorkspace	      off
+      SaveName		      ScopeData
+      YMin		      -7.5
+      YMax		      7.5
+      SampleInput	      off
+      SampleTime	      -1
+      ZoomMode		      on
+      Grid		      on
+      DataFormat	      StructureWithTime
+      Decimation	      1
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[1 1 1]"
+	AxesColor		"[1 1 1]"
+	AxesTickColor		"[0.501960784313725 0.501960784313725 0.501960784313725]"
+	LineColors		"[0 0.447058823529412 0.741176470588235;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[3 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
+      }
+      Location		      [397 739 1693 960]
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Serial Configuration"
+      SID		      "1"
+      Ports		      []
+      Position		      [285, 807, 415, 863]
+      ZOrder		      1
+      Priority		      "-200000"
+      LibraryVersion	      "1.176"
+      SourceBlock	      "instrumentlib/Serial Configuration"
+      SourceType	      "Serial Configuration"
+      ComPortMenu	      "<Please select a port...>"
+      ComPort		      "COM7"
+      ObjConstructor	      "serial('COM7');"
+      BaudRate		      "115200"
+      DataBits		      "8"
+      Parity		      "none"
+      StopBits		      "1"
+      FlowControl	      "none"
+      Timeout		      "10"
+      ByteOrder		      "LittleEndian"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Serial Receive"
+      SID		      "2"
+      Ports		      [0, 1]
+      Position		      [285, 1047, 415, 1103]
+      ZOrder		      323
+      LibraryVersion	      "1.176"
+      SourceBlock	      "instrumentlib/Serial Receive"
+      SourceType	      "Serial Receive"
+      ComPortMenu	      "<Please select a port...>"
+      ComPort		      "<Please select a port...>"
+      Header		      "A"
+      Terminator	      "LF ('\\n')"
+      DataSize		      "[1  1]"
+      DataType		      "single"
+      EnableBlockingMode      on
+      ActionDataUnavailable   "Output last received value"
+      CustomValue	      "0"
+      SampleTime	      "0.01"
+      Port {
+	PortNumber		1
+	DataLogging		on
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Serial Send"
+      SID		      "11"
+      Ports		      [1]
+      Position		      [285, 927, 415, 983]
+      ZOrder		      325
+      LibraryVersion	      "1.176"
+      SourceBlock	      "instrumentlib/Serial Send"
+      SourceType	      "Serial Send"
+      ComPortMenu	      "<Please select a port...>"
+      ComPort		      "COM7"
+      ObjConstructor	      "serial('COM7');"
+      Terminator	      "<none>"
+      EnableBlockingMode      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Shaft"
+      SID		      "80"
+      Ports		      [0, 0, 0, 0, 0, 2, 1]
+      Position		      [195, 525, 235, 565]
+      ZOrder		      363
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Body Elements/Solid"
+      SourceType	      "Cylindrical Solid"
+      LogSimulationData	      off
+      GraphicAmbientColor     "[0.15 0.15 0.15 1.0]"
+      GraphicAmbientColor_conf "compiletime"
+      BasedOnType	      "Density"
+      CenterOfMass	      "[0 0 0]"
+      CenterOfMassUnits	      "m"
+      CenterOfMass_conf	      "compiletime"
+      GraphicDiffuseColor     "[0.5 0.5 0.5]"
+      GraphicDiffuseColor_conf "compiletime"
+      CylinderLength	      "1"
+      CylinderLengthUnits     "m"
+      CylinderLength_conf     "compiletime"
+      CylinderRadius	      "20"
+      CylinderRadiusUnits     "mm"
+      CylinderRadius_conf     "compiletime"
+      Density		      "1000"
+      DensityUnits	      "kg/m^3"
+      Density_conf	      "compiletime"
+      DoExposeReferenceFrame  "on"
+      GraphicEmissiveColor    "[0.0 0.0 0.0 1.0]"
+      GraphicEmissiveColor_conf	"compiletime"
+      ExportEntireGeometry    "off"
+      SerializedFrames	      "<Frames><Frame><Id>Frame1</Id><Value><Name>F1</Name><Origin><Source>GeometricFeature</So"
+      "urce><FeatureName>top surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>+Z</DefinedDirection><Source>"
+      "ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureName></PrimaryAxis><SecondaryA"
+      "xis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+X</SourceDirection><"
+      "FeatureName></FeatureName></SecondaryAxis></Value></Frame><Frame><Id>Frame2</Id><Value><Name>F2</Name><Origin><S"
+      "ource>GeometricFeature</Source><FeatureName>bottom surface</FeatureName></Origin><PrimaryAxis><DefinedDirection>"
+      "+Z</DefinedDirection><Source>ReferenceFrame</Source><SourceDirection>+Z</SourceDirection><FeatureName></FeatureN"
+      "ame></PrimaryAxis><SecondaryAxis><DefinedDirection>+X</DefinedDirection><Source>ReferenceFrame</Source><SourceDi"
+      "rection>+X</SourceDirection><FeatureName></FeatureName></SecondaryAxis></Value></Frame></Frames>"
+      MarkerShape	      "Sphere"
+      MarkerSize	      "10"
+      MarkerSize_conf	      "compiletime"
+      GraphicType	      "FromGeometry"
+      InertiaType	      "CalculateFromGeometry"
+      Mass		      "1"
+      MassUnits		      "kg"
+      Mass_conf		      "compiletime"
+      MomentsOfInertia	      "[1 1 1]"
+      MomentsOfInertiaUnits   "kg*m^2"
+      MomentsOfInertia_conf   "compiletime"
+      GraphicOpacity	      "1.0"
+      GraphicOpacity_conf     "compiletime"
+      ProductsOfInertia	      "[0 0 0]"
+      ProductsOfInertiaUnits  "kg*m^2"
+      ProductsOfInertia_conf  "compiletime"
+      GraphicShininess	      "75"
+      GraphicShininess_conf   "compiletime"
+      GraphicSpecularColor    "[0.5 0.5 0.5 1.0]"
+      GraphicSpecularColor_conf	"compiletime"
+      GraphicVisPropType      "SimpleVisualProperties"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Simulink-PS\nConverter"
+      SID		      "88"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [635, 1012, 650, 1028]
+      ZOrder		      375
+      LibraryVersion	      "5.0"
+      SourceBlock	      "nesl_utility/Simulink-PS\nConverter"
+      SourceType	      "Simulink-PS\nConverter"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ContentPreviewEnabled   on
+      PhysicalDomain	      "network_engine_domain"
+      SubClassName	      "ps_input"
+      LeftPortType	      "input"
+      RightPortType	      "output"
+      PseudoPeriodic	      off
+      Frequencies	      "[]"
+      NoiseDistribution	      "none"
+      NoiseParameters	      "[]"
+      AffineConversion	      off
+      FilteringAndDerivatives "provide"
+      SimscapeFilterOrder     "1"
+      InputFilterTimeConstant "0.001"
+      UdotUserProvided	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Simulink-PS\nConverter1"
+      SID		      "81"
+      Ports		      [1, 0, 0, 0, 0, 0, 1]
+      Position		      [315, 632, 330, 648]
+      ZOrder		      371
+      LibraryVersion	      "5.0"
+      SourceBlock	      "nesl_utility/Simulink-PS\nConverter"
+      SourceType	      "Simulink-PS\nConverter"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ContentPreviewEnabled   on
+      PhysicalDomain	      "network_engine_domain"
+      SubClassName	      "ps_input"
+      LeftPortType	      "input"
+      RightPortType	      "output"
+      PseudoPeriodic	      off
+      Frequencies	      "[]"
+      NoiseDistribution	      "none"
+      NoiseParameters	      "[]"
+      AffineConversion	      off
+      FilteringAndDerivatives "provide"
+      SimscapeFilterOrder     "1"
+      InputFilterTimeConstant "0.001"
+      UdotUserProvided	      "0"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      SID		      "82"
+      Ports		      [0, 1]
+      Position		      [145, 615, 175, 645]
+      ZOrder		      370
+      Frequency		      "2*pi*20"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Solver\nConfiguration"
+      SID		      "83"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [-160, 599, -120, 631]
+      ZOrder		      359
+      LibraryVersion	      "5.0"
+      SourceBlock	      "nesl_utility/Solver\nConfiguration"
+      SourceType	      "Solver\nConfiguration"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ContentPreviewEnabled   off
+      PhysicalDomain	      "network_engine_domain"
+      SubClassName	      "solver"
+      LeftPortType	      "input"
+      RightPortType	      "generic"
+      Tones		      "[]"
+      Harmonics		      "[]"
+      SimulateNoise	      off
+      Profile		      off
+      UseLocalSampling	      off
+      EnableSwitchedLinearOptims on
+      FrequencyDomain	      off
+      UseCCode		      off
+      RelTol		      "0.001"
+      AbsTol		      "1e-06"
+      MinStep		      "1e-09"
+      ToWorkspace	      off
+      RevertToSquareIcSolve   off
+      NumHomotopyIterations   "100"
+      PhasorMode	      off
+      PhasorModeNumHarmonics  "1"
+      DoDC		      off
+      ResidualTolerance	      "1e-09"
+      UseLocalSolver	      off
+      LocalSolverChoice	      "NE_BACKWARD_EULER_ADVANCER"
+      LocalSolverSampleTime   "0.001"
+      DoFixedCost	      off
+      MaxNonlinIter	      "3"
+      MaxModeIter	      "2"
+      ComputeImpulses	      off
+      ImpulseIterations	      "2"
+      LinearAlgebra	      "Sparse"
+      EquationFormulation     "NE_TIME_EF"
+      DelaysMemoryBudget      "1024"
+      AutomaticFiltering      on
+      FilteringTimeConstant   "0.001"
+      PartitionStorageMethod  "AS_NEEDED"
+      PartitionMemoryBudget   "1024"
+      PartitionMethod	      "FAST"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "World Frame"
+      SID		      "84"
+      Ports		      [0, 0, 0, 0, 0, 0, 1]
+      Position		      [-160, 515, -120, 555]
+      ZOrder		      360
+      LibraryVersion	      "7.21"
+      SourceBlock	      "sm_lib/Frames and\nTransforms/World Frame"
+      SourceType	      "World Frame"
+      LogSimulationData	      off
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold"
+      SID		      "48"
+      Position		      [-95, 940, -60, 970]
+      ZOrder		      341
+      SampleTime	      "0.01"
+    }
+    Line {
+      ZOrder		      144
+      SrcBlock		      "Cast To Single"
+      SrcPort		      1
+      DstBlock		      "Byte Pack1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      147
+      SrcBlock		      "Byte Pack1"
+      SrcPort		      1
+      DstBlock		      "Serial Send"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      150
+      SrcBlock		      "Serial Receive"
+      SrcPort		      1
+      DstBlock		      "Cast To Double"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      171
+      SrcBlock		      "Zero-Order\nHold"
+      SrcPort		      1
+      DstBlock		      "Cast To Single"
+      DstPort		      1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      79
+      SrcBlock		      "Rigid\nTransform"
+      SrcPort		      LConn1
+      Points		      [-10, 0]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"World Frame"
+	SrcPort			RConn1
+	Points			[10, 0]
+      }
+      Branch {
+	ConnectType		"DEST_DEST"
+	Points			[-95, 615; 0, -80]
+	Branch {
+	  ConnectType		  "SRC_DEST"
+	  SrcBlock		  "Mechanism\nConfiguration"
+	  SrcPort		  RConn1
+	  Points		  [10, 0; 0, -80]
+	}
+	Branch {
+	  ConnectType		  "SRC_SRC"
+	  DstBlock		  "Solver\nConfiguration"
+	  DstPort		  RConn1
+	}
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      83
+      SrcBlock		      "Bearing Joint1"
+      SrcPort		      LConn1
+      Points		      [-43, 0; -1, -80]
+      Branch {
+	ConnectType		"DEST_DEST"
+	SrcBlock		"Rigid\nTransform"
+	SrcPort			RConn1
+	Points			[1, 0]
+      }
+      Branch {
+	ConnectType		"DEST_SRC"
+	DstBlock		"Bearing Joint"
+	DstPort			LConn1
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      175
+      SrcBlock		      "Bearing Joint"
+      SrcPort		      RConn1
+      Points		      [40, 0; 0, 5]
+      DstBlock		      "Shaft"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      176
+      SrcBlock		      "Offset1"
+      SrcPort		      RConn1
+      Points		      [9, 0; 0, 85]
+      DstBlock		      "External Force\nand Torque"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      178
+      SrcBlock		      "Brick Solid"
+      SrcPort		      RConn1
+      DstBlock		      "Offset"
+      DstPort		      RConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      179
+      SrcBlock		      "Offset1"
+      SrcPort		      LConn1
+      DstBlock		      "Brick Solid"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      180
+      SrcBlock		      "Simulink-PS\nConverter1"
+      SrcPort		      RConn1
+      Points		      [3, 0; 0, -10]
+      DstBlock		      "External Force\nand Torque"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      181
+      SrcBlock		      "Bearing Joint1"
+      SrcPort		      RConn1
+      Points		      [34, 0; 0, -60]
+      DstBlock		      "Shaft"
+      DstPort		      LConn2
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      184
+      SrcBlock		      "Offset"
+      SrcPort		      LConn1
+      DstBlock		      "Shaft"
+      DstPort		      RConn1
+    }
+    Line {
+      ZOrder		      187
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      DstBlock		      "Simulink-PS\nConverter1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      188
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      189
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [18, 0; 0, -45]
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      190
+      SrcBlock		      "Cast To Double"
+      SrcPort		      1
+      Points		      [88, 0]
+      Branch {
+	ZOrder			203
+	Points			[0, -23; -28, 0; 0, -32]
+	DstBlock		"Simulink-PS\nConverter"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			202
+	Points			[50, 0]
+	Branch {
+	  ZOrder		  199
+	  Points		  [0, -85]
+	  DstBlock		  "Display"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  198
+	  DstBlock		  "Scope3"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      205
+      SrcBlock		      "Bearing Joint"
+      SrcPort		      RConn2
+      Points		      [9, 0; 0, 35; -483, 0; 0, 375]
+      DstBlock		      "PS-Simulink\nConverter"
+      DstPort		      LConn1
+    }
+    Line {
+      LineType		      "Connection"
+      ZOrder		      195
+      SrcBlock		      "Bearing Joint"
+      SrcPort		      LConn2
+      Points		      [-9, 0; 0, 327; 653, 0; 0, 138]
+      DstBlock		      "Simulink-PS\nConverter"
+      DstPort		      RConn1
+    }
+    Line {
+      ZOrder		      207
+      SrcBlock		      "PS-Simulink\nConverter"
+      SrcPort		      1
+      DstBlock		      "Zero-Order\nHold"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "85"
+      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
+      "\n</style></head><body align=\"center\" style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-"
+      "style:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0p"
+      "x; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16px;\">Modèle du système</span></p></body></"
+      "html>"
+      Position		      [415, 729, 575, 748]
+      InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      on
+      FixedWidth	      on
+      HorizontalAlignment     "center"
+      BackgroundColor	      "white"
+      Interpreter	      "rich"
+      ZOrder		      -4
+    }
+  }
+}
